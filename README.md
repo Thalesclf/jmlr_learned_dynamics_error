@@ -15,7 +15,7 @@ We analyze these effects through finite-time Jacobian propagators and a first-or
 
 The experiments study worst-case transient growth, realized error amplification, defect alignment, vector cancellation, effective spectral dimensionality, and finite-amplitude perturbations. A separate intervention study evaluates whether direct multistep rollout fine-tuning improves forecasting relative to one-step fine-tuning.
 
-**Paper:** [Preprint PDF](https://drive.google.com/file/d/1b3_FYDdXUwYl3ZS6uXUAl1zwuxYyLiSb/view?usp=sharing) (link retained from the earlier README; refer to the manuscript for the exact version of the reported results).
+**Paper:** [Preprint PDF](https://drive.google.com/file/d/1b3_FYDdXUwYl3ZS6uXUAl1zwuxYyLiSb/view?usp=sharing)
 
 ## Repository contents
 
@@ -59,8 +59,6 @@ ml-rollout-error-amplification/
 ├── CITATION.cff
 └── LICENSE
 ```
-
-The numerical implementations are retained close to the versions used in the experiments, rather than replaced by a post-hoc refactor. **Saved result archives and selected checkpoints are included:** you do not need to retrain the five models in either system to regenerate the paper figures.
 
 ### Which script produced which results?
 
