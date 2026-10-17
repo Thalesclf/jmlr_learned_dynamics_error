@@ -1,0 +1,19 @@
+{
+  "system": "Lorenz96",
+  "surrogate": "ResidualMLP",
+  "seed": 2,
+  "test_one_step_mse": 0.0009136983755327115,
+  "propagator_path": "true_trajectory",
+  "horizons": [
+    1,
+    2,
+    5,
+    10,
+    20,
+    40,
+    80,
+    160
+  ],
+  "n_test_states": 100,
+  "note": "Ordinary-rollout diagnostic rerun; PGD/adversarial campaigns intentionally skipped."
+}

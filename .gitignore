@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+figures/
+results/seed_*/spectral_modes_campaign.csv
+results_l96_jmlr/seed_*/spectral_modes_campaign.csv
+results_ks/seed_*/spectral_modes_campaign.csv
+results_rollout_retry/_tuning/
+.DS_Store
+Thumbs.db

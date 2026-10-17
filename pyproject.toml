@@ -1,0 +1,12 @@
+[project]
+name = "ml-rollout-error-amplification"
+version = "0.2.0"
+description = "Reproducibility suite for realized finite-time rollout error and intervention studies."
+requires-python = ">=3.10"
+dependencies = ["numpy", "torch", "matplotlib", "scipy"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
