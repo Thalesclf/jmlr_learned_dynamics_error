@@ -372,7 +372,7 @@ For GitHub, review the changes in a cloned working tree before pushing. GitHub e
 
 ## Citation
 
-The manuscript is currently available through the [preprint link retained from the original README](https://drive.google.com/file/d/1b3_FYDdXUwYl3ZS6uXUAl1zwuxYyLiSb/view?usp=sharing).
+The manuscript is currently available through the [JMLR Preprint PDF](https://drive.google.com/file/d/1b3_FYDdXUwYl3ZS6uXUAl1zwuxYyLiSb/view?usp=sharing).
 
 Please cite the manuscript if you use the theoretical framework, experimental methods, or archived results. See [`CITATION.cff`](CITATION.cff) for repository citation metadata. This README does not assume a journal acceptance date or invent an arXiv identifier.
 
