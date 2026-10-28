@@ -2,7 +2,7 @@
 
 Code, saved results and LaTeX sources of the manuscript *Realized Error Amplification in Learned Dynamical Systems* by Thales Coelho Leite Fava, submitted to the Journal of Machine Learning Research.
 
-[**Paper (PDF):**](https://drive.google.com/file/d/1b3_FYDdXUwYl3ZS6uXUAl1zwuxYyLiSb/view?usp=drive_link)
+[**Realized Error Amplification in Learned Dynamical Systems (PDF)**](https://drive.google.com/file/d/1b3_FYDdXUwYl3ZS6uXUAl1zwuxYyLiSb/view?usp=drive_link)
 
 The rollout error of an autoregressive surrogate is written, to first order, as a sum of one-step defects transported by the tangent dynamics. An exact factorization splits it into the defect magnitude, the worst-case gain of the tail propagators, the efficiency with which the defects use that gain, the cancellation among the transported defects and a nonlinear remainder. The study covers residual MLPs trained on Lorenz-96 with three training budgets (L96-20, L96-150 and L96-2000) and Fourier neural operators trained on Kuramoto-Sivashinsky (KS), with five seeds each.
 
