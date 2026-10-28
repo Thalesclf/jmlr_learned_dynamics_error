@@ -8,12 +8,14 @@ authors:
     given-names: "Thales Coelho Leite"
 year: 2026
 license: MIT
-repository-code: https://github.com/Thalesclf/jmlr_learned_dynamics_error
-url: https://github.com/Thalesclf/jmlr_learned_dynamics_error
+repository-code: "https://github.com/Thalesclf/jmlr_learned_dynamics_error"
+url: "https://github.com/Thalesclf/jmlr_learned_dynamics_error"
 preferred-citation:
-  type: article
+  type: unpublished
   title: "Realized Error Amplification in Learned Dynamical Systems"
   authors:
     - family-names: "Fava"
       given-names: "Thales Coelho Leite"
   year: 2026
+  notes: "Manuscript submitted to the Journal of Machine Learning Research"
+  url: "GOOGLE_DRIVE_LINK"
