@@ -1,0 +1,67 @@
+\begin{figure}[t]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+    >=Latex, font=\small,
+    st/.style={circle, draw, minimum size=7.5mm, inner sep=1pt},
+    box/.style={rectangle, draw, rounded corners=2pt, minimum height=6.5mm, inner sep=3pt, align=center},
+    fbox/.style={rectangle, draw, rounded corners=2pt, minimum height=7mm, minimum width=11mm, inner sep=3pt, align=center, fill=black!4},
+    flow/.style={->, thick},
+    defect/.style={->, dashed},
+]
+% trajectories ------------------------------------------------------------
+\node[font=\bfseries, anchor=east] at (-0.4,2.4) {reference};
+\node[font=\bfseries, anchor=east] at (-0.4,1.0) {surrogate rollout};
+\node[st] (x0) at (0.5,1.7) {$\mathbf x_0$};
+\node[st] (x1) at (2.6,2.4) {$\mathbf x_1$};
+\node[st] (x2) at (4.7,2.4) {$\mathbf x_2$};
+\node (d1) at (6.6,2.4) {$\cdots$};
+\node[st] (xT) at (8.5,2.4) {$\mathbf x_T$};
+\draw[flow] (x0) to[out=25,in=180] node[above] {$F$} (x1);
+\draw[flow] (x1) -- node[above] {$F$} (x2);
+\draw[flow] (x2) -- (d1); \draw[flow] (d1) -- (xT);
+\node[st,dashed] (h1) at (2.6,1.0) {$\hat{\mathbf x}_1$};
+\node[st,dashed] (h2) at (4.7,1.0) {$\hat{\mathbf x}_2$};
+\node (d2) at (6.6,1.0) {$\cdots$};
+\node[st,dashed] (hT) at (8.5,1.0) {$\hat{\mathbf x}_T$};
+\draw[flow] (x0) to[out=-25,in=180] node[below] {$f_\theta$} (h1);
+\draw[flow] (h1) -- node[below] {$f_\theta$} (h2);
+\draw[flow] (h2) -- (d2); \draw[flow] (d2) -- (hT);
+\draw[<->, thick] (xT) -- node[right] {$\delta_T$} (hT);
+% defects and transport ------------------------------------------------------
+\node[font=\bfseries, anchor=east] at (-0.4,-0.6) {defects};
+\node[font=\bfseries, anchor=east] at (-0.4,-1.8) {transported};
+\node[box] (e0) at (1.6,-0.6) {$\mathbf e_0$};
+\node[box] (e1) at (3.7,-0.6) {$\mathbf e_1$};
+\node at (5.6,-0.6) {$\cdots$};
+\node[box] (ek) at (7.2,-0.6) {$\mathbf e_{T-1}$};
+\node[box] (q0) at (1.6,-1.8) {$\Phi_0\mathbf e_0$};
+\node[box] (q1) at (3.7,-1.8) {$\Phi_1\mathbf e_1$};
+\node at (5.6,-1.8) {$\cdots$};
+\node[box] (qk) at (7.2,-1.8) {$\mathbf e_{T-1}$};
+\draw[defect] (x0.south) to[out=-80,in=110] (e0.north);
+\draw[defect] (x1.south) to[out=-95,in=80] (e1.north);
+\draw[defect] (7.9,2.0) to[out=-110,in=70] (ek.north);
+\draw[flow] (e0) -- (q0); \draw[flow] (e1) -- (q1); \draw[flow] (ek) -- (qk);
+\node[circle, draw, minimum size=7mm, inner sep=0pt] (sum) at (9.0,-1.8) {$\sum$};
+\draw[flow] (q0.south) -- ++(0,-0.4) -| (sum.south);
+\draw[flow] (q1.south) -- ++(0,-0.3) -| (sum.south);
+\draw[flow] (qk.east) -- (sum.west);
+\node[box, anchor=west] (lin) at (9.8,-1.8) {$\delta^{\rm lin}_T=\sum_k\Phi_k\mathbf e_k$};
+\draw[flow] (sum) -- (lin);
+% factor chain ---------------------------------------------------------------
+\node[font=\bfseries, anchor=east] at (-0.4,-3.7) {exact budget};
+\node[fbox] (f1) at (0.6,-3.7) {$S_T$};
+\node[fbox] (f2) at (3.4,-3.7) {$B_T$};
+\node[fbox] (f3) at (6.2,-3.7) {$Q_T$};
+\node[fbox] (f4) at (9.0,-3.7) {$L_T$};
+\node[fbox] (f5) at (11.8,-3.7) {$E_T$};
+\draw[flow] (f1) -- node[above] {$\times\,\bar g_T$} node[below=0.6mm, font=\scriptsize, align=center] {worst-case\\tail gain} (f2);
+\draw[flow] (f2) -- node[above] {$\times\,\eta_T$} node[below=0.6mm, font=\scriptsize, align=center] {directional\\efficiency} (f3);
+\draw[flow] (f3) -- node[above] {$\times\,C_T$} node[below=0.6mm, font=\scriptsize, align=center] {vector\\cancellation} (f4);
+\draw[flow] (f4) -- node[above] {$\times\,N_T$} node[below=0.6mm, font=\scriptsize, align=center] {nonlinear\\remainder} (f5);
+\end{tikzpicture}%
+}
+\caption{Realized error amplification. The reference map $F$ and the surrogate $f_\theta$ start from the same state. At every reference state the surrogate injects a defect $\mathbf e_k=f_\theta(\mathbf x_k)-\mathbf x_{k+1}$, which the tail propagator $\Phi_k=\Phir(T,k+1)$ transports to the forecast time ($\Phi_{T-1}=I$), and the transported defects are summed. The rollout error factorizes exactly into the injected magnitude $S_T=\sum_k\|\mathbf e_k\|_2$ and four factors: the worst-case gain of the tail propagators ($B_T=\sum_k\sigma_1(\Phi_k)\|\mathbf e_k\|_2$), the fraction of that gain realized by the defect directions ($Q_T=\sum_k\|\Phi_k\mathbf e_k\|_2$), the cancellation in the vector sum ($L_T=\|\delta^{\rm lin}_T\|_2$) and the nonlinear remainder ($E_T=\|\delta_T\|_2$); see Proposition~\ref{prop:factorization}.}
+\label{fig:concept}
+\end{figure}

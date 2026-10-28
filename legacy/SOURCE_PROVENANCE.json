@@ -1,0 +1,1336 @@
+{
+  "description": "File checksums of consolidated archival data/code (not independent experiment provenance proof)",
+  "supplied_zip_sha256": {
+    "results_rollout_retry_final(1).zip": "74f70a924c14f90fa19dca6aa2a9c39140ac8f31b4a2b55308ac90c416b5f013",
+    "results_l96_jmlr(1).zip": "abf47b5c3c475a3aa6f6cdfe279843dec88bc8ed50ad50153d12698beb717da6",
+    "results_ks(1).zip": "d49dd2cb236319b6d49caa6967853c949a4a4e7c4027fb63e1292d06cd314f4d",
+    "results(3).zip": "0d8b7611b31c7a368297bfa717acc7d99475c641a7df7c48e742043c93064149"
+  },
+  "files": [
+    {
+      "path": ".github/workflows/tests.yml",
+      "source": "Original GitHub Actions workflow",
+      "sha256": "73615bd445672876f6e9579621cdd69365fc067b5b19aba2d441820b01c12956"
+    },
+    {
+      "path": ".gitignore",
+      "source": "Updated ignore rules (allow reproducibility checkpoints)",
+      "sha256": "88ff2fb904cd5a24012f2bc9fd461ad4adec3984478ff4cf932537a7460c420a"
+    },
+    {
+      "path": "ASSEMBLY.md",
+      "source": "Packaging adjustment: final release documentation/test/summary code",
+      "sha256": "0672c026dcfe64586a2824dbe672daa671cd1db5218c7ecd00525a3b161cb088"
+    },
+    {
+      "path": "CITATION.cff",
+      "source": "provided GitHub repository: CITATION.cff",
+      "sha256": "7ae8138ee9af65de2d395a6b93cad0e90dd47f8ddf5f051d0f941740baa5864d"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "source": "provided GitHub repository: CONTRIBUTING.md",
+      "sha256": "369c86f3da4f8424ad7294194e11704d831cfcdb36debf799a8aa8fb52bc35bb"
+    },
+    {
+      "path": "ENVIRONMENT.md",
+      "source": "environment metadata compiled from saved checkpoints",
+      "sha256": "62afbe5f3ba81ecfb9a2d627e3d2e4bbfeb07da3ef29d3ed17913b8c17191cc9"
+    },
+    {
+      "path": "LICENSE",
+      "source": "provided GitHub repository: LICENSE",
+      "sha256": "a6f48b5248bda45810971f485d95124ed7221d5159145f92399de9083c5f829f"
+    },
+    {
+      "path": "README.md",
+      "source": "Packaging adjustment: final release documentation/test/summary code",
+      "sha256": "bad3c10f027cbc226032c779e6a4efa77546484fb329892e5ac002d8f7f6dbe3"
+    },
+    {
+      "path": "REPRODUCIBILITY.md",
+      "source": "Final numerical provenance and limitations",
+      "sha256": "fd54cfbaed46030519d96860f782be7706cb938bf9e59cf1e56a37df7b16b0dd"
+    },
+    {
+      "path": "aggregate_interventions.py",
+      "source": "aggregate_interventions.py",
+      "sha256": "99ef80183f236cd71cd7aaae0e50506587bb6068d82255c80185b41886364004"
+    },
+    {
+      "path": "cross_system_summary.py",
+      "source": "JMLR sprint bundle: cross_system_summary.py",
+      "sha256": "3a7af4e37bc29a2695d55157568719bcd617ff2d6def74ce52c0b2f752d78d0a"
+    },
+    {
+      "path": "experiments_campaign_spectral.py",
+      "source": "provided GitHub repository: experiments_campaign_spectral.py",
+      "sha256": "d1506e849bc42cfe63383161505770c6e3b07721f0b0ca763c119e23c00e38c3"
+    },
+    {
+      "path": "experiments_campaign_spectral_jmlr.py",
+      "source": "JMLR sprint bundle: experiments_campaign_spectral_jmlr.py",
+      "sha256": "539a155255be8fcc16fb274472b75f7e19e05a913c5508226fbf8f4bb7baaf59"
+    },
+    {
+      "path": "generate_all_figures.m",
+      "source": "Merged MATLAB figure script, with stale missing-data comments corrected",
+      "sha256": "376fa4f40444ffe9743e297ebe73adcfa4e1cba907e921f70f964c538fa2f7b0"
+    },
+    {
+      "path": "intervention_campaign.py",
+      "source": "Uploaded final six-arm source intervention_campaign(4).py (matches final config method registry)",
+      "sha256": "7dab0130858052e01caf6745f03cfc74a1f1b3d3c89072294d009b27f98d35ac"
+    },
+    {
+      "path": "intervention_campaign_v3.py",
+      "source": "Prior retained historical five-arm implementation for results_intervention_final_v3",
+      "sha256": "6b7f3c7a2e871451f3006e44513bc4f29d93448439d518a355cdba0f9f6c48c8"
+    },
+    {
+      "path": "ks_fno_campaign.py",
+      "source": "JMLR sprint bundle: ks_fno_campaign.py",
+      "sha256": "f03704cd35cae0588acf7e114ad621ea20632ec8730ac77eb19e7d7cde0509ba"
+    },
+    {
+      "path": "prepare_results.py",
+      "source": "new lossless data restore helper",
+      "sha256": "aa3042844c85afa477686598a65c9996e24f0a709e5e5c162e7abce02cf6771d"
+    },
+    {
+      "path": "pyproject.toml",
+      "source": "Updated metadata for retained scientific code",
+      "sha256": "7c9490ae8ade495caa7b350235532d83bbd1ce5c263561302d02a98a1bf2d1cf"
+    },
+    {
+      "path": "requirements.txt",
+      "source": "Dependencies required by retained campaigns and tests",
+      "sha256": "fc0c42b641d80cbb78b17f05975d2a5ae331e314a797eb7bc2230ef6a8367ef0"
+    },
+    {
+      "path": "results/seed_0/checkpoint.pt",
+      "source": "User-supplied results(3).zip:results/seed_0/checkpoint.pt",
+      "sha256": "89589eed299fe141c58f7b92052812dd307d6f819932da11bc7fbe75c2f6b95d"
+    },
+    {
+      "path": "results/seed_0/defect_terms_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "1c29e49fb1dd880d1f6839f40efa0f9bd4f79a7e940128b735e603a00ce23572"
+    },
+    {
+      "path": "results/seed_0/diagnostic_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "fe006597726e300b51c22e39d0c645d5d25be5ee6d8785586f9eb5b5eafc520d"
+    },
+    {
+      "path": "results/seed_0/epsilon_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "84a81187efdccec7896b437dc107ed24e9225c9c5e5f92691cb80d986e237a3b"
+    },
+    {
+      "path": "results/seed_0/epsilon_sweep.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "422c1d645f864daca9932bc250843d1aa9272710d233e2f7d7a38d62c3a0af05"
+    },
+    {
+      "path": "results/seed_0/perturbation_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "f05362e04c5a1daf7a781a156cc65b88b156782244df9818c62426ad29c2fad3"
+    },
+    {
+      "path": "results/seed_0/spectral_modes_campaign.csv.gz",
+      "source": "original GitHub repository archive",
+      "sha256": "6fdeb544f1e9913662a9998285e6d0e6635a4b70f962252586678b297fdddfeb"
+    },
+    {
+      "path": "results/seed_1/checkpoint.pt",
+      "source": "User-supplied results(3).zip:results/seed_1/checkpoint.pt",
+      "sha256": "3b6adfe5cf1ad95aca4c1274de881f00a4e0f6ecc9c4f977e620b481d4951837"
+    },
+    {
+      "path": "results/seed_1/defect_terms_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "db383297487c81cd5da0af9733166b1248726af57e6a5cdd6d0d8af62930fdca"
+    },
+    {
+      "path": "results/seed_1/diagnostic_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "24bb4ecbbfe2d0ceff839e488efb94305281d74789eac6d25e338cdf72f99710"
+    },
+    {
+      "path": "results/seed_1/epsilon_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "b5705617231e6b78d25201786b44e8570d4cbdc1b3cf3d88f832151f239b5359"
+    },
+    {
+      "path": "results/seed_1/epsilon_sweep.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "34a21928c122a999de28ae265db4947cd2c281050e4baad52ee6f1a1a1218eaa"
+    },
+    {
+      "path": "results/seed_1/perturbation_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "20a26dd5e09ed31179c3155b504cd95020f21d2c73f4c4f2f07f676c45bf8833"
+    },
+    {
+      "path": "results/seed_1/spectral_modes_campaign.csv.gz",
+      "source": "original GitHub repository archive",
+      "sha256": "bc90d26ad73b751a3c6c8f0799635c0b771de422be742d92b2479d4192b509d5"
+    },
+    {
+      "path": "results/seed_2/checkpoint.pt",
+      "source": "User-supplied results(3).zip:results/seed_2/checkpoint.pt",
+      "sha256": "640d1dcf5b53d9d0ff7e11f8a545d33b96d613003c34024c4a9331d5e1533469"
+    },
+    {
+      "path": "results/seed_2/defect_terms_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "238a695fdd1a9a850d472d52d7e117d04ed7fe51941e96ed7c2c617893fe6746"
+    },
+    {
+      "path": "results/seed_2/diagnostic_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "95bb0f5919d6d0b60e7b1c80abc52552201b44ad176d96ab370c8c0b4cf0505d"
+    },
+    {
+      "path": "results/seed_2/epsilon_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "31bcfe97176771e57b773194eccee368a6c4ddeec7969e7d45ecb468575b368f"
+    },
+    {
+      "path": "results/seed_2/epsilon_sweep.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "dacf75d01aeef78c6b385e48300ca2f7a959e80ab166c3a1369af1e9ca8f6789"
+    },
+    {
+      "path": "results/seed_2/perturbation_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "df6b2340e72cc16d30ccf6c6d01b0298b302af8c02daf8db664ba490d6da2923"
+    },
+    {
+      "path": "results/seed_2/spectral_modes_campaign.csv.gz",
+      "source": "original GitHub repository archive",
+      "sha256": "55eefeb248d67fc14248c88ada3eefa51caa9cc2649d5aaaf150252cf915e5a8"
+    },
+    {
+      "path": "results/seed_3/checkpoint.pt",
+      "source": "User-supplied results(3).zip:results/seed_3/checkpoint.pt",
+      "sha256": "a349e5a7446d50d1a9484dacce2ab18ddd69f3c32f0c087c96316d70bf330756"
+    },
+    {
+      "path": "results/seed_3/defect_terms_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "6fe5dc7bb411e419f3a0c3cff67cd866d189c1d628d8197921f22e58a5415ade"
+    },
+    {
+      "path": "results/seed_3/diagnostic_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "8c1d8a8a111181a813741d471f443c9bf1c5a6604d0b8bda0d25d20ffc5fa104"
+    },
+    {
+      "path": "results/seed_3/epsilon_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "289fead211be18f5752ddba93e746807c1c1b64815b709b84f94962a3f01b41b"
+    },
+    {
+      "path": "results/seed_3/epsilon_sweep.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "e150ea232cab9ca120a10fcd620f7e16f3a937d76fa60404dc6acf1b89a9a12f"
+    },
+    {
+      "path": "results/seed_3/perturbation_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "1ded5121bed318af644a31c13c28547644059bf62b238df02389e14634ede0b4"
+    },
+    {
+      "path": "results/seed_3/spectral_modes_campaign.csv.gz",
+      "source": "original GitHub repository archive",
+      "sha256": "a2008bdabf03339dcd09270e35c5f5d6066051b5672097cdb5fdc52c1b111279"
+    },
+    {
+      "path": "results/seed_4/checkpoint.pt",
+      "source": "User-supplied results(3).zip:results/seed_4/checkpoint.pt",
+      "sha256": "44b0840e33934a666198984b0cef85192dde6bf33f2906dfca22a308dc45a4de"
+    },
+    {
+      "path": "results/seed_4/defect_terms_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "5b8f19c16f95a87650bc0971f2a9bf3b38989300e27d4605a484351d4b8a34d1"
+    },
+    {
+      "path": "results/seed_4/diagnostic_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "9a4915598a409b2a90733e6f33bc4ff128f6c07c633952694ac61ce76239ad39"
+    },
+    {
+      "path": "results/seed_4/epsilon_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "cdb27f4f7194bfa4aa1493fee3504b3e6a50717c2bd64375b8c68d2d142f804f"
+    },
+    {
+      "path": "results/seed_4/epsilon_sweep.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "3c5e784fe95f03a71d2fd81cc999a941ad3680c91a84a221fc580731fdb21f58"
+    },
+    {
+      "path": "results/seed_4/perturbation_campaign.csv",
+      "source": "original GitHub repository archive",
+      "sha256": "eef287a2b06d84618a1b5edff7cd7a02a272bca2e0b86b7fee8028594f1b5ed4"
+    },
+    {
+      "path": "results/seed_4/spectral_modes_campaign.csv.gz",
+      "source": "original GitHub repository archive",
+      "sha256": "d9c205df54ac49d499371df525a3f3180d3532d6a7d64b2ce2284d5f93caedff"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_0/best_defect_energy.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_0/best_defect_energy.pt",
+      "sha256": "28ee1afb203a4ffe56f9cd7d42e266cb6e8dfcc795551bf693e42da21ec81e03"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_0/best_local_jacobian.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_0/best_local_jacobian.pt",
+      "sha256": "5f5942edde4a83cf179c10d7a8f6968b82189fa72aa525fca995438e2ac8a429"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_0/best_one_step.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_0/best_one_step.pt",
+      "sha256": "556639073f8ecdb0aa0dc6f3e2dc45bb4bbff0dfce267990711ad05feb172962"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_0/best_rollout.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_0/best_rollout.pt",
+      "sha256": "9cbe11c84e14cb439416b60a77253ffd50aef1fdd52fb76c1ccf315d543d4e4e"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_0/config.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_0/config.json",
+      "sha256": "6a087f85c249f00306b3d424add6e3e2ed02ec889f59ac31be5203fb04c94d02"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_0/initial_model_test.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_0/initial_model_test.json",
+      "sha256": "3b24d267e1a53a49fa4ef26f47c475bbbd0db6f12a9cb753484f82f51c6710b8"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_0/results.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_0/results.json",
+      "sha256": "663f419736c85af877bddbc287231d4b2915329d6c877250624fe914d224b39c"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_0/training_history.csv",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_0/training_history.csv",
+      "sha256": "4bfa26dc9e9d258a8059159d1afd8a464fce8f589cac6998addb328021ef33c0"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_1/best_defect_energy.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_1/best_defect_energy.pt",
+      "sha256": "173252f7e64863755363c75a6c0f089202fad26364c9988189651d88d895db23"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_1/best_local_jacobian.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_1/best_local_jacobian.pt",
+      "sha256": "e7693c16fda6ebbe333c62fccd1836824c80afab3c3c72fc3aac3b2ba597817a"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_1/best_one_step.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_1/best_one_step.pt",
+      "sha256": "4e96b6ea990e8eae478802205713493b0bf50fce493ddab85e9283825108c32c"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_1/best_rollout.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_1/best_rollout.pt",
+      "sha256": "e29c45493ae50e8261224e566ed172050bafc78b338dc0f4e19f5574d5710aff"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_1/config.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_1/config.json",
+      "sha256": "ae591eb34ba1beb8ae689b5f43e547e859b96c2df8e1dbb32b25bba0c706fa52"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_1/initial_model_test.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_1/initial_model_test.json",
+      "sha256": "c41b4133a1d794d696adbbfc0dcb2c06d123318fd6fc575c582b62494e0245d2"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_1/results.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_1/results.json",
+      "sha256": "8fe9f4e86394b737bb8f95a05a646254a44ed781361e1894d7dfecb745a99815"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_1/training_history.csv",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_1/training_history.csv",
+      "sha256": "270346a4108049517bcd1a61b610b3e1aeac071742865d33aac8ce5ddbe14f6f"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_2/best_defect_energy.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_2/best_defect_energy.pt",
+      "sha256": "7c7efbba5c8790994e7dd8544d64c7725f7fb3b2cb6cfb106be0dec2c632c6a3"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_2/best_local_jacobian.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_2/best_local_jacobian.pt",
+      "sha256": "0ff8336d29d9953de5075fe406be6dddcd468a3c8a7ac79c91d61493c703e290"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_2/best_one_step.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_2/best_one_step.pt",
+      "sha256": "74c6ac9bd4ba7682154971e7e1c415d959d7b22e52cdbda33ec6b90c7e9a2b13"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_2/best_rollout.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_2/best_rollout.pt",
+      "sha256": "55380be4958effdbc91a4bea5662f52130bd0d51ad16643d26c815fe50ea4c6e"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_2/config.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_2/config.json",
+      "sha256": "d17afd916308aed2a632ea33a8531151b05bc362513e893e1eb85aaff9568b8d"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_2/initial_model_test.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_2/initial_model_test.json",
+      "sha256": "a1944ae4b7dac450a6dd0d505fc9b5f95a8e3c40fc95ec8fe40d98111a8f89d6"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_2/results.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_2/results.json",
+      "sha256": "037de7cedf3234cbb10bbc1855f5bdea1e28c0da7187c725651285f00721c004"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_2/training_history.csv",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_2/training_history.csv",
+      "sha256": "54ef9fa45ebfe7cd6de80137a6b11b76fae8a645fc9252d7bdfbb8fb427b3792"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_3/best_defect_energy.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_3/best_defect_energy.pt",
+      "sha256": "4087ffa0bd203a68f5f86dcaf8ba8bfd0432f784377a67a2915a932f310d5061"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_3/best_local_jacobian.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_3/best_local_jacobian.pt",
+      "sha256": "106a6b4c02c645dafcb69e7f571b8455994c855008531b984817ac0aaa95bc7e"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_3/best_one_step.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_3/best_one_step.pt",
+      "sha256": "c741deb0fb8687df6d62d1fba8827b4692ddf361af09cebe4b42ecc0cb7cf6bd"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_3/best_rollout.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_3/best_rollout.pt",
+      "sha256": "ef9765d464d5af7e10d967847a19519c53b75a62863b14f790cb27d2b266e2d9"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_3/config.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_3/config.json",
+      "sha256": "4a73a735c2688abe058f3048a2bb2a075d5a07281c4518ff0ab8abe0f49eff06"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_3/initial_model_test.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_3/initial_model_test.json",
+      "sha256": "01a5b03d5a69f7ec0bf4f2191773053f7ba049c6403c3ce7599409f8f6af8bb8"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_3/results.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_3/results.json",
+      "sha256": "396d8256c60c0d939115ec0aa8e4d79542fcbcbd2ef52498dfa6e6aaf6317b36"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_3/training_history.csv",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_3/training_history.csv",
+      "sha256": "6f246e7853e817b601c53ad70efb3f08b95065292793cfc19b5b1b1b6db8b36e"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_4/best_defect_energy.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_4/best_defect_energy.pt",
+      "sha256": "ededbd864fdcd8064497f6940fcdc56c9b839e5f122565221f8757f691c85b7b"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_4/best_local_jacobian.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_4/best_local_jacobian.pt",
+      "sha256": "28220a16efe8253bfa75d47cc5a47fde37d1c3d999e974a310ca427b81da5709"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_4/best_one_step.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_4/best_one_step.pt",
+      "sha256": "2c2e152b859bef86a4b18effe9ba7fa399696db21cc33b06f9d560a4021177ef"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_4/best_rollout.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_4/best_rollout.pt",
+      "sha256": "d496cb0c4bcc7b3a73070c0e06b416bca1d375af96f106917f7be4bb54768aa7"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_4/config.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_4/config.json",
+      "sha256": "78eb96c385ea5b5925aff2c0f32f75066703ef8c2392f3b5fa7969c1717e7eab"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_4/initial_model_test.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_4/initial_model_test.json",
+      "sha256": "4f543fb49c15ae0953484ccfbe26897f0cf9c277fe1b0ebcc1c5c5ea7593a1b3"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_4/results.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_4/results.json",
+      "sha256": "00cb588ae464f62b7bc41ff93b0333176b3f10d19278eae506eed8352130a6ff"
+    },
+    {
+      "path": "results_intervention_final_v3/ks/seed_4/training_history.csv",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/ks/seed_4/training_history.csv",
+      "sha256": "5a83c0a99ffc16ff131282858ad6cd41cb398a3eeec9eab5379ad3b497010718"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_0/best_defect_energy.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_0/best_defect_energy.pt",
+      "sha256": "4f1ee4fc6bc3e8f51d684b9e90395247dfe399ce0f251a80a7756ce9462b4eb8"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_0/best_local_jacobian.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_0/best_local_jacobian.pt",
+      "sha256": "561b3b33e95e22013c3a4f3f62f234348e676e2d17dd755da8d231f10ed44c0e"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_0/best_one_step.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_0/best_one_step.pt",
+      "sha256": "52880b990f22621512e08e71d747002d80397908fafa67b808c44f041e3aad39"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_0/best_rollout.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_0/best_rollout.pt",
+      "sha256": "eafc20e569189ace0e05e82b58ad047a650a3af72c0b429400d0fd5e2332f2f6"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_0/config.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_0/config.json",
+      "sha256": "5b901540dbf40d7f58ef649ea55a7859e64990877f20345f47137bd7f81c9584"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_0/initial_model_test.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_0/initial_model_test.json",
+      "sha256": "b6076ffc212462482cf1a84b6b987872b18b099857fef68d9cd5e708bc7a1fcd"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_0/results.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_0/results.json",
+      "sha256": "c4820570814ae250484652a8464617281d6e610f895a83951f4191db694b7973"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_0/training_history.csv",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_0/training_history.csv",
+      "sha256": "d2b55595418c3c5f996010765064ce77b1383d7e157544165dc93f54fc2461a5"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_1/best_defect_energy.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_1/best_defect_energy.pt",
+      "sha256": "ec4746a9c524aba6f6904a8f20c91e579050a229c679f3ca7a17d3c6dd074fe5"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_1/best_local_jacobian.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_1/best_local_jacobian.pt",
+      "sha256": "457bdbadfa96852d72cb90287509a2ecb8442eca631e852034e2d0036ebc8f73"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_1/best_one_step.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_1/best_one_step.pt",
+      "sha256": "e2d2011b5d3015a90a7e677bf16b6f03c88b19246df8306aaa7510c19d722d1c"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_1/best_rollout.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_1/best_rollout.pt",
+      "sha256": "e445c6ecaef75dca051c91c65229447cee5c3f77ec1b2205cfe10452c95d2d77"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_1/config.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_1/config.json",
+      "sha256": "574c8177724ee0c03343a7863b03cefd6de1e4349a98d343eeaa339e133b9626"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_1/initial_model_test.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_1/initial_model_test.json",
+      "sha256": "a9c19eeedd60a8392ab6676fece6da2c21d7606b069c5cabd40d60ea078b686e"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_1/results.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_1/results.json",
+      "sha256": "b7d5ca0772817ebc08933c0045ca4ff5805a2a50701b9563c43b7ee9230f3e31"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_1/training_history.csv",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_1/training_history.csv",
+      "sha256": "fe9c19c22eb81d64335760f252d6e791e20fbd475d233c271e350e8efe0f6144"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_2/best_defect_energy.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_2/best_defect_energy.pt",
+      "sha256": "2cd60c40433c8d71ef66addcb1cabfb0eab98ee8d07391d87d398b82bc5d14ed"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_2/best_local_jacobian.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_2/best_local_jacobian.pt",
+      "sha256": "bcbb0600147c9a5f8e5273386b86f5bac311cf00ded09a291cbbdc6bbb2fa826"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_2/best_one_step.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_2/best_one_step.pt",
+      "sha256": "e8502ee129852c25991995fe3763ec86c510315f81462f58b21b9f1e7d5313c3"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_2/best_rollout.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_2/best_rollout.pt",
+      "sha256": "d95a5e7502d5ed5be987880c94b06854e78dccf59f4978e9e8a3ccba1a9091e6"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_2/config.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_2/config.json",
+      "sha256": "1e12a227ad7a67499bed8f8c19120fae46c26a10c8bcd882d13f3de21cc45edb"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_2/initial_model_test.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_2/initial_model_test.json",
+      "sha256": "51ba6acc7980f4cc2724330857e7bc7bbc40c87529fce694d49ad67566c7a9bc"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_2/results.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_2/results.json",
+      "sha256": "5e7a25164d3affcc5745079bf341406fde99a1b465b8de85114478afdfae26ee"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_2/training_history.csv",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_2/training_history.csv",
+      "sha256": "f2821709015f14545a677412acb2e8e8c56c7c28dd759d87638992bcb8f460cd"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_3/best_defect_energy.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_3/best_defect_energy.pt",
+      "sha256": "e54bad1813f2d7a3b60ecef3bf78abfb8f3a742b2ae97b67cb1939ba6219138d"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_3/best_local_jacobian.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_3/best_local_jacobian.pt",
+      "sha256": "7dced4820141b8e145f6ce1a6384e55c2bf772a471661a4b857b000662faef50"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_3/best_one_step.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_3/best_one_step.pt",
+      "sha256": "155edb3d9a97bd55a341decf5e7983c6e1d88bde4c708a663b11b8932c1c26d7"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_3/best_rollout.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_3/best_rollout.pt",
+      "sha256": "d69cd676bbd6c4b30360add3ca1afce98850ea70e182384ae7f8e913cc08e992"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_3/config.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_3/config.json",
+      "sha256": "88340d714a2fd7a2c348967d42b3eee02e373b577cf5c37bbc2fb20847c42600"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_3/initial_model_test.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_3/initial_model_test.json",
+      "sha256": "87262bd439dfc8aa01688d07bdee6d21da154608a7281256a53fb17c21c5118c"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_3/results.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_3/results.json",
+      "sha256": "ccc4f45f1e83e572c414de46108e37e549cb0bc7d184133844d5b32c7949f122"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_3/training_history.csv",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_3/training_history.csv",
+      "sha256": "9bf54e7916ec8dcb11e26e54c1fad665f94e0e13f99a010547a8b6e0b41fcf3c"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_4/best_defect_energy.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_4/best_defect_energy.pt",
+      "sha256": "cde5b3fcf2db070e32d09895a01b416a8e9f46d3005af98f0bcaf133d440f93d"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_4/best_local_jacobian.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_4/best_local_jacobian.pt",
+      "sha256": "9da8509afef161df7880f1ff79b7ceb095c574b996005431e5efb38621e011ae"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_4/best_one_step.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_4/best_one_step.pt",
+      "sha256": "3102b1de9573649701e727cc90562d23ba52c43d0d0764bb651f5f92f0d41072"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_4/best_rollout.pt",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_4/best_rollout.pt",
+      "sha256": "166fe68199b9d7c37d248b6914c5b0d5707698c261712c8df77f7783572afd64"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_4/config.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_4/config.json",
+      "sha256": "cccfd2fc2f65bdfed6627378dd57acfa7c2467b587ff1d5b0dd3b6c8687a5a00"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_4/initial_model_test.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_4/initial_model_test.json",
+      "sha256": "44a9c292d9216f9ad936a4ce52c023106095a6026047b2adcc0d0136194540f9"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_4/results.json",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_4/results.json",
+      "sha256": "12b8b217ec09da27486444dd2f2b2d46d6cf9c1a9d937cb4a923b53c3104888c"
+    },
+    {
+      "path": "results_intervention_final_v3/l96/seed_4/training_history.csv",
+      "source": "results_intervention_final_v3 (2).zip:results_intervention_final_v3/l96/seed_4/training_history.csv",
+      "sha256": "71acc20a1f379fb8768c133ad48c968edbdc642c50f89bedbc261d2e64c74299"
+    },
+    {
+      "path": "results_ks/seed_0/checkpoint.pt",
+      "source": "results_ks.zip:results_ks/seed_0/checkpoint.pt",
+      "sha256": "4fd86ec0e2ae53afc1f04d8c34f7b7349900727b385655eb8314d798e515b901"
+    },
+    {
+      "path": "results_ks/seed_0/defect_terms_campaign.csv",
+      "source": "results_ks.zip:results_ks/seed_0/defect_terms_campaign.csv",
+      "sha256": "829086adc9bea127e76394ba8bdb3305eadd703b4740ee63dc078c540711cb7e"
+    },
+    {
+      "path": "results_ks/seed_0/diagnostic_campaign.csv",
+      "source": "results_ks.zip:results_ks/seed_0/diagnostic_campaign.csv",
+      "sha256": "21cfb4250fe65a3afbb21ba4ee52c6a27a46f933fae4df27fa7542c140bc9c01"
+    },
+    {
+      "path": "results_ks/seed_0/metadata.json",
+      "source": "results_ks.zip:results_ks/seed_0/metadata.json",
+      "sha256": "36acb789acc6b03e4c8d7bfe2dd6bc8ee0f43be8adf23f39868ae192a5f7c042"
+    },
+    {
+      "path": "results_ks/seed_0/spectral_modes_campaign.csv.gz",
+      "source": "results_ks.zip:results_ks/seed_0/spectral_modes_campaign.csv",
+      "sha256": "1532ee83d79c83bc7958a0f9e4c7640abb1e3cfb8e3a3010c7a46e82cee9b9a7",
+      "transformation": "gzip lossless compression"
+    },
+    {
+      "path": "results_ks/seed_1/checkpoint.pt",
+      "source": "results_ks.zip:results_ks/seed_1/checkpoint.pt",
+      "sha256": "b7837cca67bc50f4b9c6abe7c8b0206bfd63c8addcc46c70989dac17a4c1dfa7"
+    },
+    {
+      "path": "results_ks/seed_1/defect_terms_campaign.csv",
+      "source": "results_ks.zip:results_ks/seed_1/defect_terms_campaign.csv",
+      "sha256": "bdafd45a86ab905f08c4e036d00292e19841eae3147aa2ccec23a0d11056c1cf"
+    },
+    {
+      "path": "results_ks/seed_1/diagnostic_campaign.csv",
+      "source": "results_ks.zip:results_ks/seed_1/diagnostic_campaign.csv",
+      "sha256": "e727480645994fcc0c852a76f5785b1d152a41734c630c311bd01da56fc694a5"
+    },
+    {
+      "path": "results_ks/seed_1/metadata.json",
+      "source": "results_ks.zip:results_ks/seed_1/metadata.json",
+      "sha256": "d3610aa8a6550ae383c9246ae953eff0f877d50a50725a371f74fde5c65e9545"
+    },
+    {
+      "path": "results_ks/seed_1/spectral_modes_campaign.csv.gz",
+      "source": "results_ks.zip:results_ks/seed_1/spectral_modes_campaign.csv",
+      "sha256": "95d9afaf4905b6e0826b0406b61e284192d54aa893b69a17cf1e4c6680af2388",
+      "transformation": "gzip lossless compression"
+    },
+    {
+      "path": "results_ks/seed_2/checkpoint.pt",
+      "source": "results_ks.zip:results_ks/seed_2/checkpoint.pt",
+      "sha256": "c8f4f275a6963debe3c08e8419a78ff9e5cc5b6a12bf9108e41c7791bb257dd9"
+    },
+    {
+      "path": "results_ks/seed_2/defect_terms_campaign.csv",
+      "source": "results_ks.zip:results_ks/seed_2/defect_terms_campaign.csv",
+      "sha256": "d9eee5acb3df988320b9fafd2cb4dc391d4ea0193044e4e35b2cd6882281b5f7"
+    },
+    {
+      "path": "results_ks/seed_2/diagnostic_campaign.csv",
+      "source": "results_ks.zip:results_ks/seed_2/diagnostic_campaign.csv",
+      "sha256": "32c9b5c3771304cf224b254bac2333243aaa07c309f72e248f9f6ab3d4af3c1f"
+    },
+    {
+      "path": "results_ks/seed_2/metadata.json",
+      "source": "results_ks.zip:results_ks/seed_2/metadata.json",
+      "sha256": "e72fb4d4d6a02160ca5a35fc8a09e6b9b63f445a4ed745dfbd84220a617ce0ae"
+    },
+    {
+      "path": "results_ks/seed_2/spectral_modes_campaign.csv.gz",
+      "source": "results_ks.zip:results_ks/seed_2/spectral_modes_campaign.csv",
+      "sha256": "c1e586b98e22ceeb53458c8175302eac3762040901cf31c8b2833bbbcf9684c7",
+      "transformation": "gzip lossless compression"
+    },
+    {
+      "path": "results_ks/seed_3/checkpoint.pt",
+      "source": "results_ks.zip:results_ks/seed_3/checkpoint.pt",
+      "sha256": "44b263525abac5b7c6e394ead2e3c7548074a074b3b7c89cfb6b681c3f6ee861"
+    },
+    {
+      "path": "results_ks/seed_3/defect_terms_campaign.csv",
+      "source": "results_ks.zip:results_ks/seed_3/defect_terms_campaign.csv",
+      "sha256": "5c8762f957fe46f73900ebf2ca26bee07297cfc36044e5dd0b2a4fd549c033c2"
+    },
+    {
+      "path": "results_ks/seed_3/diagnostic_campaign.csv",
+      "source": "results_ks.zip:results_ks/seed_3/diagnostic_campaign.csv",
+      "sha256": "33e2d5c3a6947cecc5350029354399187c79371f3056a31e63e8285727a98038"
+    },
+    {
+      "path": "results_ks/seed_3/metadata.json",
+      "source": "results_ks.zip:results_ks/seed_3/metadata.json",
+      "sha256": "e75c6d9057aaa5f7fcd2c22a3988433ced4d3d1a6d12c5307e4f423853104017"
+    },
+    {
+      "path": "results_ks/seed_3/spectral_modes_campaign.csv.gz",
+      "source": "results_ks.zip:results_ks/seed_3/spectral_modes_campaign.csv",
+      "sha256": "19351e5500115f9e5b58675d8585c4bdbae3472a665b6540e6f1285557fc590d",
+      "transformation": "gzip lossless compression"
+    },
+    {
+      "path": "results_ks/seed_4/checkpoint.pt",
+      "source": "results_ks.zip:results_ks/seed_4/checkpoint.pt",
+      "sha256": "e3a7ca1f8e66275d6b09958cd5067d8119176d6fd952eb168bdc239bc19fb179"
+    },
+    {
+      "path": "results_ks/seed_4/defect_terms_campaign.csv",
+      "source": "results_ks.zip:results_ks/seed_4/defect_terms_campaign.csv",
+      "sha256": "b012c318b4c8b0bb280de7bdb14eb249a3bbc4c56b0e0280f5d24024f6914036"
+    },
+    {
+      "path": "results_ks/seed_4/diagnostic_campaign.csv",
+      "source": "results_ks.zip:results_ks/seed_4/diagnostic_campaign.csv",
+      "sha256": "091ffe1da126230a82b439f9b85baa0efce515a70a4db3d59b3fff9622e96394"
+    },
+    {
+      "path": "results_ks/seed_4/metadata.json",
+      "source": "results_ks.zip:results_ks/seed_4/metadata.json",
+      "sha256": "3dac163431f12770a66b0a7f1a14450236c889093cbeb914585576aeabed257a"
+    },
+    {
+      "path": "results_ks/seed_4/spectral_modes_campaign.csv.gz",
+      "source": "results_ks.zip:results_ks/seed_4/spectral_modes_campaign.csv",
+      "sha256": "0319716bac2c68b05607ff0a688af8fc5c9f5f56dd2f6bbbe59438b9383ac48b",
+      "transformation": "gzip lossless compression"
+    },
+    {
+      "path": "results_l96_jmlr/seed_0/checkpoint.pt",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_0/checkpoint.pt",
+      "sha256": "92c94c61861550a8718ca6605ae61fa6978812ab48e34db32010c5a0430dfc4e"
+    },
+    {
+      "path": "results_l96_jmlr/seed_0/defect_terms_campaign.csv",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_0/defect_terms_campaign.csv",
+      "sha256": "440c73a23f1c6adaeaa9c105854a8b5ca19abb8248e11469dcac2c12e77919ee"
+    },
+    {
+      "path": "results_l96_jmlr/seed_0/diagnostic_campaign.csv",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_0/diagnostic_campaign.csv",
+      "sha256": "571878e5e4db7de1d4914a6001415afe36a84a76177f59fce8ca8f061a03d975"
+    },
+    {
+      "path": "results_l96_jmlr/seed_0/metadata.json",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_0/metadata.json",
+      "sha256": "71a7a5dfe5ccd8b3ca94a45005be7c35d7542f62023808f5591c442f1634a10d"
+    },
+    {
+      "path": "results_l96_jmlr/seed_0/spectral_modes_campaign.csv.gz",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_0/spectral_modes_campaign.csv",
+      "sha256": "d3135d3309c97fdbe6db822b99a0ffbb3eb262f6db555b1eb4ed36280d4824a8",
+      "transformation": "gzip lossless compression"
+    },
+    {
+      "path": "results_l96_jmlr/seed_1/checkpoint.pt",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_1/checkpoint.pt",
+      "sha256": "cd21f78c836c6e17a9930368954c67ae59bdcca0c100b2f96acf57b240410f44"
+    },
+    {
+      "path": "results_l96_jmlr/seed_1/defect_terms_campaign.csv",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_1/defect_terms_campaign.csv",
+      "sha256": "d04a23bbbd38a058a34f4a4fda2476b471e2b031627f26dd5b5658adef8979cd"
+    },
+    {
+      "path": "results_l96_jmlr/seed_1/diagnostic_campaign.csv",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_1/diagnostic_campaign.csv",
+      "sha256": "fd4e1a0ab9ddc99c07aa7a7cd41be8a5a3b5de8dd683c9988f94ff878df16b04"
+    },
+    {
+      "path": "results_l96_jmlr/seed_1/metadata.json",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_1/metadata.json",
+      "sha256": "e50185195ce01c0d98136c1b82fbf6a3b646556486ba2be3022c315e65db0963"
+    },
+    {
+      "path": "results_l96_jmlr/seed_1/spectral_modes_campaign.csv.gz",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_1/spectral_modes_campaign.csv",
+      "sha256": "935eb876ec86babbdb7f47bbf1b65864623c2015460306d77bd86ee0aefdd39b",
+      "transformation": "gzip lossless compression"
+    },
+    {
+      "path": "results_l96_jmlr/seed_2/checkpoint.pt",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_2/checkpoint.pt",
+      "sha256": "4bc3845acf24916dbc3cbc355f68e4689217deda8331e5b4a8364a111de934cc"
+    },
+    {
+      "path": "results_l96_jmlr/seed_2/defect_terms_campaign.csv",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_2/defect_terms_campaign.csv",
+      "sha256": "08eb05d6c3447824787e0740b618c0d042718e152c5b3674f01bc751c78aadca"
+    },
+    {
+      "path": "results_l96_jmlr/seed_2/diagnostic_campaign.csv",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_2/diagnostic_campaign.csv",
+      "sha256": "288436a56ed1989306ed2c5ddb60eb72ade6c870019d8672e3dcaec05132a2e3"
+    },
+    {
+      "path": "results_l96_jmlr/seed_2/metadata.json",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_2/metadata.json",
+      "sha256": "21e88501b4f35253d01aa37205b6526546308bc51b0e7d8078348038dc7fc31a"
+    },
+    {
+      "path": "results_l96_jmlr/seed_2/spectral_modes_campaign.csv.gz",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_2/spectral_modes_campaign.csv",
+      "sha256": "dc06c4ec5de4ba0040f16327c108ab54077e1ae5b6355e05c40cc5d492698972",
+      "transformation": "gzip lossless compression"
+    },
+    {
+      "path": "results_l96_jmlr/seed_3/checkpoint.pt",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_3/checkpoint.pt",
+      "sha256": "d787496b33ec230ac50b9b5195e5812456197580dbc8f34b8bcd1728c946032f"
+    },
+    {
+      "path": "results_l96_jmlr/seed_3/defect_terms_campaign.csv",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_3/defect_terms_campaign.csv",
+      "sha256": "ad603d6f71b81ed4fd0e6adf6df52ca8fa954d8990472dd6483e77f961a62f1e"
+    },
+    {
+      "path": "results_l96_jmlr/seed_3/diagnostic_campaign.csv",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_3/diagnostic_campaign.csv",
+      "sha256": "ed75a82a786685d47a79a7cfb9064d60a386a4da1df1b19d6719d454229e1059"
+    },
+    {
+      "path": "results_l96_jmlr/seed_3/metadata.json",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_3/metadata.json",
+      "sha256": "907cca89dad727e26546484e10433698b811d24caea5a78512d4875ddb78eaed"
+    },
+    {
+      "path": "results_l96_jmlr/seed_3/spectral_modes_campaign.csv.gz",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_3/spectral_modes_campaign.csv",
+      "sha256": "32b0016d2c29a9b4adac6ac93a0ade51faf2bc72d057d62c705108880d47041a",
+      "transformation": "gzip lossless compression"
+    },
+    {
+      "path": "results_l96_jmlr/seed_4/checkpoint.pt",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_4/checkpoint.pt",
+      "sha256": "4fe98a9906fc5a8a82f8359ae17bbd9b224a1ab10aa05a4d2a2d42f8d6777fff"
+    },
+    {
+      "path": "results_l96_jmlr/seed_4/defect_terms_campaign.csv",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_4/defect_terms_campaign.csv",
+      "sha256": "484cb247ece0159221b0790a9d4208736d0a472fcfbcd0236370f4bd106c9ad7"
+    },
+    {
+      "path": "results_l96_jmlr/seed_4/diagnostic_campaign.csv",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_4/diagnostic_campaign.csv",
+      "sha256": "888b75133bc04149c16ec3afbe360de145ba78a0758ea693b79e74815723a92a"
+    },
+    {
+      "path": "results_l96_jmlr/seed_4/metadata.json",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_4/metadata.json",
+      "sha256": "d490ad62c33273a9eced4a738e3f8ffd1e5b1f76047caef50cd76b4ad3b590b7"
+    },
+    {
+      "path": "results_l96_jmlr/seed_4/spectral_modes_campaign.csv.gz",
+      "source": "results_l96_jmlr.zip:results_l96_jmlr/seed_4/spectral_modes_campaign.csv",
+      "sha256": "3ef636b55b60ccda12c5ebd5eb79abc6295419009e8bcf5a502909e31a3e04c9",
+      "transformation": "gzip lossless compression"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_0/best_one_step.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_0/best_one_step.pt",
+      "sha256": "30cee2864597ba3fd4081629d826356f3779a691c5b4cd70ac01612ca3adc0cd"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_0/best_rollout.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_0/best_rollout.pt",
+      "sha256": "3444cb8764894b8e77fcd03169c74982fdc1017b640bd69d540ad70ef8e4b895"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_0/config.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_0/config.json",
+      "sha256": "0375d65fa92b8c67d68d9d7f3ac5678fb90c7a8936f63bb23f308b20bd346d1f"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_0/initial_model_test.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_0/initial_model_test.json",
+      "sha256": "8e5bb074218d8e48392845c1f241f2c2fe624a360275b2a0fedbc659ca27be33"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_0/results.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_0/results.json",
+      "sha256": "6d9b4744e10160c2d80fc9874e264a390458eaa896764d9ed4ad38cdb96ff6c2"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_0/training_history.csv",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_0/training_history.csv",
+      "sha256": "757701e046e8b40f985c3d33a42d585a2531a32132b2bb493d2be5ff437bef3c"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_1/best_one_step.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_1/best_one_step.pt",
+      "sha256": "740d53683c9aa0931a35bc0b52e6bdedfe94048ecf78d01ddec4b042a7295924"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_1/best_rollout.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_1/best_rollout.pt",
+      "sha256": "db4939d4629fe8c201184676ac868e974dcf3135f3dfbb8a28572e6e2cd55444"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_1/config.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_1/config.json",
+      "sha256": "7dd231f00e59f35bbb4dd8f4ade4914995583849ff5432b3898e164bd3b95539"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_1/initial_model_test.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_1/initial_model_test.json",
+      "sha256": "f5c2a82d3fae93daf7bacc6f66318351f13f0109cfd92d400f93a03437fd8fdf"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_1/results.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_1/results.json",
+      "sha256": "2cc45a6b1ad75cf821174ec3449f05300c154b4eb9cb0b077279a6081e7610a7"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_1/training_history.csv",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_1/training_history.csv",
+      "sha256": "6952719b70e9db14c4d4b27f4b37b52f41515a04a0606fc3f73789ccba204ad2"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_2/best_one_step.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_2/best_one_step.pt",
+      "sha256": "006cf4b41fbed31fff9cccb452d98f2da4745a6e5bdf933d20dc13dfa6213c83"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_2/best_rollout.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_2/best_rollout.pt",
+      "sha256": "da6a0d18b363d1b1332638096ce8ff0bd9f38b89622f9d4f344e8f1f5bf6e2c3"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_2/config.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_2/config.json",
+      "sha256": "0a668c47cbe6ce6ce103cf340e2616c1f1bb4f8e3071983082ae233742084c57"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_2/initial_model_test.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_2/initial_model_test.json",
+      "sha256": "34b225bc4c4a8ff01c8ed4d0d56c37daf3d47efee5329181e751b23697c0b047"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_2/results.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_2/results.json",
+      "sha256": "e3d3fe8328d3da78077ae6f3960f87abd14e9b1a4cf7fb0df2199e1b020773cc"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_2/training_history.csv",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_2/training_history.csv",
+      "sha256": "b1d655f319afc9b79dd62c2d672b83b336adc6b9757fed9de5a8f2c9d2588f98"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_3/best_one_step.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_3/best_one_step.pt",
+      "sha256": "9d81830c53634cfba9e64d3bbb140d33b0de7c4eedb962d402e8bbdcfff9ced6"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_3/best_rollout.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_3/best_rollout.pt",
+      "sha256": "fcc6c37bb9d2e4f5ee436c8abd3dcec9cbb62c7da7f8785552070d348e5e0741"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_3/config.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_3/config.json",
+      "sha256": "4493068d6c7df802a8b4fb6b63fc7f3f1e1fdd01bef18625acacfc2e5f8f8ec6"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_3/initial_model_test.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_3/initial_model_test.json",
+      "sha256": "b65716c3135c5484ab0762c325077a2317d02eca59c3bab439528aa8464098da"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_3/results.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_3/results.json",
+      "sha256": "eff037e5eddc3bc7d344d71008fdb838d6658f7dabcff0f888d5d255a65d27d9"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_3/training_history.csv",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_3/training_history.csv",
+      "sha256": "e41b3c067cb71d57feda9d5f37cc91cdd0409320bda1bdeaf2e5d5c3b5932b49"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_4/best_one_step.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_4/best_one_step.pt",
+      "sha256": "d5a37f9a3315f672d888c68dc8fa6334e1a33c4e579294508d72ccad2e8a9b76"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_4/best_rollout.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_4/best_rollout.pt",
+      "sha256": "550f0b19daa8f5158b6367815e88239b2a7a04f4e86a4ee93d7cda877a6d1541"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_4/config.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_4/config.json",
+      "sha256": "b689c1ddef35a7896d58691daa0666b20528e43126c083b4c9f465b8ee2c565c"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_4/initial_model_test.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_4/initial_model_test.json",
+      "sha256": "beacd0e410b0ef5d9e0ff049b38082883959d83ce9285ffe04c86140b3a0c70b"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_4/results.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_4/results.json",
+      "sha256": "c598e2196c897f04eac68f4faab16ed09d8394009929f2a4cb89e3abdd12cb7a"
+    },
+    {
+      "path": "results_rollout_retry_final/ks/seed_4/training_history.csv",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/ks/seed_4/training_history.csv",
+      "sha256": "0bb702eb58c73126218d49b6c150415ce74f6c334d4e2527724e116d62e77898"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_0/best_one_step.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_0/best_one_step.pt",
+      "sha256": "bc767176bafc346738e92c25a132da56d9be93ac52a22e19ae5a9921f1c3e6ac"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_0/best_rollout.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_0/best_rollout.pt",
+      "sha256": "22855d75468b71888739a12bf5c64e35ebf3a73271273969e24761251fa8556e"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_0/config.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_0/config.json",
+      "sha256": "03c72e57c55af2b1ba2689433959aaf923d9e482721721a7ffb8ceee700a3f90"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_0/initial_model_test.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_0/initial_model_test.json",
+      "sha256": "87e3caed15f84d008660c796211025bfa9d52a9b7ac995cf843f0dc88a059c97"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_0/results.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_0/results.json",
+      "sha256": "3636fa7b0392a07b716c112639c44b5d6c7859f3e5e187abfafa2e4a03b4ec66"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_0/training_history.csv",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_0/training_history.csv",
+      "sha256": "6ea8c0394b671571f4d14b49c804983faf964d99739051aa8ef8dc2d5c1df56c"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_1/best_one_step.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_1/best_one_step.pt",
+      "sha256": "bac35f3b3c09248f7aabb1599ab4003d9face82d65388a2fc5b545d4aa97771e"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_1/best_rollout.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_1/best_rollout.pt",
+      "sha256": "6d11dbbf7136becbc68a2fc8312c40c484572307eec52b8d23f622ad48d4c094"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_1/config.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_1/config.json",
+      "sha256": "b5faa0746bfa06bd8a646f212356ddb677e34df38eb064df56cc0e20f78f8caa"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_1/initial_model_test.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_1/initial_model_test.json",
+      "sha256": "4ecfec0e3a08c28d0bffb3a88d92c59938d1a27f7043822f1d5b19053b627e8e"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_1/results.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_1/results.json",
+      "sha256": "1268730b6069b028dcac4fab79d3a30acdf2538c711722e27302c4616e69fbfe"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_1/training_history.csv",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_1/training_history.csv",
+      "sha256": "d661a14c64116e55928e4ce92fbf840827a85de1ff4dd45f0375a57117c28b96"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_2/best_one_step.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_2/best_one_step.pt",
+      "sha256": "9c79b4a8ed50269e91db85dd7875fd6c9b471ca01e078afeeb9f256273e7d321"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_2/best_rollout.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_2/best_rollout.pt",
+      "sha256": "b441287031deef85113cd519e748f9750bf994c5e9f5f09ff448707971a0b51c"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_2/config.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_2/config.json",
+      "sha256": "e9dc41a3cffd18bb01813e9c2cc3249cb4c6184644563cc7c278f4145c53917a"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_2/initial_model_test.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_2/initial_model_test.json",
+      "sha256": "c515d271a69e725223bd3c0fd5e525c86d66a8f955a539d1767b3760a556092e"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_2/results.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_2/results.json",
+      "sha256": "9433140122172abdf10cebc42e1ab57cde9679c54da7f78326571cf88e0614a0"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_2/training_history.csv",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_2/training_history.csv",
+      "sha256": "2a02e48a3c21a7ecc2e913c8f47c9b16ca832e6e9c66b51d4db75ec89c5cf20c"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_3/best_one_step.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_3/best_one_step.pt",
+      "sha256": "491c5f6bc18f85708f75a584c02c75094b8a71736735988d6dd261d809d79161"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_3/best_rollout.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_3/best_rollout.pt",
+      "sha256": "49350f6a101579f9dd8db3e5a816135790bfadb3cf7cfb15d5f148b4c09853bf"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_3/config.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_3/config.json",
+      "sha256": "e1b5789844ff58212eb5ca905f4fc1bbc65434e088a262e5647df236ef657108"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_3/initial_model_test.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_3/initial_model_test.json",
+      "sha256": "88da52b91a59338f036c608f6ce608d69347e3658850ac651c5203c71f8c9a1b"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_3/results.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_3/results.json",
+      "sha256": "c36906f84e8751f438f05f695c353d8604a63b3cc5a4d926e9e750946c774883"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_3/training_history.csv",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_3/training_history.csv",
+      "sha256": "0180fbb85c2c3e86a25c5a7dc12f5af179d1ab0809adb00e4eafb78f6a2fb771"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_4/best_one_step.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_4/best_one_step.pt",
+      "sha256": "f103401e264fa751497677a7a829fafad16ba99ed996472f9e0d5c3e0846bde6"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_4/best_rollout.pt",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_4/best_rollout.pt",
+      "sha256": "627b1ec0d9eeb49aa81977a7750ff7d7db810d683f229e97586436b02435ea3e"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_4/config.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_4/config.json",
+      "sha256": "bc76709392c5089cf51f207db937c4a082388db1543a149ab1d1087d83d40066"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_4/initial_model_test.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_4/initial_model_test.json",
+      "sha256": "5aecfbfabc7da70e9b38393a65de28fd35b238cafab938083188e681b893fb3d"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_4/results.json",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_4/results.json",
+      "sha256": "7d8755bb6403180a408aec0ec6d1c0b0a454e675a63bfb461b07db1db95db476"
+    },
+    {
+      "path": "results_rollout_retry_final/l96/seed_4/training_history.csv",
+      "source": "User-supplied results_rollout_retry_final(1).zip:results_rollout_retry_final/l96/seed_4/training_history.csv",
+      "sha256": "a146518b974e78256edcc4f966e27e256494c14411c7a41c046cdcc43566db82"
+    },
+    {
+      "path": "run_intervention_final_v3_5seeds.ps1",
+      "source": "Earlier runner changed to call its exact historical five-arm source",
+      "sha256": "448a2c3b043a2c07723f227fcb648c9845646a23d349d333ce9b8dab1128f304"
+    },
+    {
+      "path": "run_ks_fno_campaign.ps1",
+      "source": "sprint bundle: run_ks_fno_campaign.ps1 (hardware path adjusted to match saved CPU run)",
+      "sha256": "71d7ce185950618d3d4f36b6c4e7fbbb7fef35dc8a5ed363e986c6ec88b546c7"
+    },
+    {
+      "path": "run_primary_campaign.ps1",
+      "source": "Original launcher with corrected source filename experiments_campaign_spectral.py",
+      "sha256": "503704cdb3cccdd35d4b96450e5e0115556079054745728deca8e9cda1c4afb8"
+    },
+    {
+      "path": "run_primary_campaign.sh",
+      "source": "provided GitHub repository: run_primary_campaign.sh",
+      "sha256": "34c133007784731ca95ea2460b39decc3228964bffe3935b8294fb45a7043237"
+    },
+    {
+      "path": "run_primary_campaign_jmlr.ps1",
+      "source": "JMLR sprint bundle: run_primary_campaign_jmlr.ps1",
+      "sha256": "177accab90cf8cc47b5f5740d6d5d7e4faec7da1a5828aa540c7ceb7adaa7e55"
+    },
+    {
+      "path": "run_rollout_retry_as_recorded.ps1",
+      "source": "Recorded hyperparameters extracted from the 10 final results configs",
+      "sha256": "e2ebe06cad7b6de9c1b740a9141cfa868818f5b74e75616d6015da83170eb280"
+    },
+    {
+      "path": "run_rollout_retry_final_5seeds.ps1",
+      "source": "run_rollout_retry_final_5seeds(4).ps1",
+      "sha256": "7f407af0105fd95140f0bedb056eb795666359a347a17ff626ac60bac5bb30e3"
+    },
+    {
+      "path": "run_rollout_retry_validation_sweep.ps1",
+      "source": "run_rollout_retry_validation_sweep(3).ps1",
+      "sha256": "f8be393e7c85ee08c134e838c3d96178bed8fd283a931ee439cc2833f4ec34b4"
+    },
+    {
+      "path": "summarize_final_rollout.py",
+      "source": "Packaging adjustment: final release documentation/test/summary code",
+      "sha256": "6d7d09957f8220645a37c3650f01fe53bb7f393d5fe16ba1bff0c97606f91cc0"
+    },
+    {
+      "path": "summarize_rollout_retry.py",
+      "source": "summarize_rollout_retry(3).py",
+      "sha256": "a45a12fa689fa7bb746a050edba07e22f02ac51fa9744b8c96eba500f6c39a19"
+    },
+    {
+      "path": "tables/README.md",
+      "source": "Repository-generated QA/metadata: tables/README.md",
+      "sha256": "63ac9e785a1160b1307c5e06415f7f34124cd7b3ff9eb1269110021f1a5c53e1"
+    },
+    {
+      "path": "tables/fig11_rollout_intervention_summary.csv",
+      "source": "Repository-generated QA/metadata: tables/fig11_rollout_intervention_summary.csv",
+      "sha256": "a445b736f8b845caa86cb18e256684898df67da83afe7c8fcd29af349b85d842"
+    },
+    {
+      "path": "tests/test_archival_layout.py",
+      "source": "Packaging adjustment: final release documentation/test/summary code",
+      "sha256": "073b511a4fe07f25258833ea7c6510134f80f7e98c06d8da38a3663e45cb9054"
+    },
+    {
+      "path": "tests/test_final_rollout_archive.py",
+      "source": "Repository-generated QA/metadata: tests/test_final_rollout_archive.py",
+      "sha256": "96b7409374a2ee14ed6503263f8d483ceab932ce1f23ffa6f1380995cb7015c8"
+    },
+    {
+      "path": "tests/test_intervention.py",
+      "source": "test_intervention.py",
+      "sha256": "207f96d19d5fde7ae079f2e8d0df631e1fc79e0852c1811a213e276e2a24a182"
+    },
+    {
+      "path": "tests/test_ks_fno.py",
+      "source": "JMLR sprint bundle: tests/test_ks_fno.py",
+      "sha256": "44b3f619d25551a97a42ed024211b35b8522a8698374a73f4874886e8947602c"
+    },
+    {
+      "path": "tests/test_smoke.py",
+      "source": "provided GitHub repository: tests/test_smoke.py",
+      "sha256": "984ba8df1d0d522449193532ee610c83466d9cb677e9a51c46a3e72354025747"
+    },
+    {
+      "path": "verify_repository.py",
+      "source": "Final archival data verification",
+      "sha256": "347925a571c6b033b5a1b73ea3cf36f2309407a2732db1f54f9bcdde3a927dc4"
+    }
+  ]
+}

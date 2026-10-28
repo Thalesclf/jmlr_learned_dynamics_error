@@ -1,0 +1,18 @@
+{
+ "models": "results/current/l96_models/e2000/seed_{seed}/model.npz",
+ "norm_from": null,
+ "label": "l96_e2000_ct",
+ "seeds": "0,1,2,3,4",
+ "H": "4,8,16",
+ "lam": "0.01,0.03,0.1,0.3",
+ "steps": 1000,
+ "batch": 64,
+ "lr": 0.0001,
+ "clip": 1.0,
+ "lr_final": 1e-06,
+ "eval_every": 100,
+ "select_h": "16,32",
+ "val_seed": 20261018,
+ "val_steps": 4000,
+ "validation_only": false
+}

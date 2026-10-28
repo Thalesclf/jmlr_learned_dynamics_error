@@ -1,0 +1,36 @@
+\section{Derivation of the Forced Error Decomposition}
+\label{app:derivation}
+
+Let $\mathbf f_k=\mathbf e_k+\mathbf r_k$. Equation~\eqref{eq:error_recursion} gives $\delta_1=\Jr_0\delta_0+\mathbf f_0$ and $\delta_2=\Jr_1\Jr_0\delta_0+\Jr_1\mathbf f_0+\mathbf f_1$. Assume that, for some $T\ge1$,
+\begin{equation*}
+\delta_{T}=\Phir(T,0)\delta_0+\sum_{k=0}^{T-1}\Phir(T,k+1)\mathbf f_{k}.
+\end{equation*}
+Multiplying by $\Jr_T$ and adding $\mathbf f_T$ gives the same expression with $T$ replaced by $T+1$, since $\Jr_T\Phir(T,s)=\Phir(T+1,s)$ and $\Phir(T+1,T+1)=I$. Equation~\eqref{eq:error_decomposition} follows by induction, and Eq.~\eqref{eq:linear_error_prediction} is obtained with $\delta_0=0$ and $\mathbf r_k=0$.
+
+\section{Finite-Amplitude Remainder Bound}
+\label{app:remainder}
+
+Suppose that $J(\mathbf x)=Df_\theta(\mathbf x)$ satisfies $\|J(\mathbf x)-J(\mathbf y)\|_2\le L_J\|\mathbf x-\mathbf y\|_2$ on a neighborhood containing the segment from $\mathbf x_k$ to $\mathbf x_k+\delta_k$. The integral form of the remainder,
+\begin{equation*}
+  \mathbf r_k=\int_0^1\left[J(\mathbf x_k+s\delta_k)-J(\mathbf x_k)\right]\delta_k\,ds,
+\end{equation*}
+gives $\|\mathbf r_k\|_2\le\frac{L_J}{2}\|\delta_k\|_2^2$. Taking norms in Eq.~\eqref{eq:error_decomposition} with $\delta_0=0$,
+\begin{equation*}
+  E_T\le B_T+\frac{L_J}{2}\sum_{k=0}^{T-1}\sigma_1(\Phi_k)\,\|\delta_k\|_2^2,
+\end{equation*}
+which is an implicit (discrete Gr\"onwall-type) bound, since $\|\delta_k\|_2$ appears on the right-hand side. The bound is local and becomes uninformative once the error reaches the scale on which $J$ varies, which is the regime identified empirically in Section~\ref{sec:res_validity}.
+
+\section{Proofs of the Propositions}
+\label{app:proofs}
+
+\paragraph{Proposition~\ref{prop:factorization}.} The product $S_T\cdot(B_T/S_T)\cdot(Q_T/B_T)\cdot(L_T/Q_T)\cdot(E_T/L_T)$ telescopes to $E_T$. The expressions of $\bar g_T$ and $\eta_T$ as weighted averages follow from the definitions of $w_k$ and $v_k$. Writing $\mathbf e_k=\sum_ic_{ki}\mathbf v_{ki}$ in the right singular basis of $\Phi_k$ gives $\|\Phi_k\mathbf e_k\|_2^2=\sum_i\sigma_{ki}^2c_{ki}^2$, which lies between $\sigma_{k1}^2c_{k1}^2=\sigma_{k1}^2a_k^2\|\mathbf e_k\|_2^2$ and $\sigma_{k1}^2\|\mathbf e_k\|_2^2$, so that $a_k\le\eta_k\le1$. As a weighted average of the $\eta_k$, $\eta_T\in(0,1]$ whenever some transported defect is nonzero. Finally, $0\le L_T\le Q_T$ by the triangle inequality, hence $C_T\in[0,1]$.
+
+\paragraph{Proposition~\ref{prop:nulls}.} For $\mathbf u$ uniform on the unit sphere, $\mathbb E[\mathbf u\mathbf u^\top]=I/d$, so that\[\mathbb E\|\Phi\mathbf u\|_2^2=\operatorname{tr}(\Phi\,\mathbb E[\mathbf u\mathbf u^\top]\,\Phi^\top)=\|\Phi\|_F^2/d=\sum_i\sigma_i^2/d.\] Dividing by $\sigma_1^2$ gives Eq.~\eqref{eq:eta_iso}, and $1\le r(\Phi)\le d$ because $\sigma_1^2\le\sum_i\sigma_i^2\le d\sigma_1^2$. For a random $\mathbf e$ with second moment $\Sigma$, $\mathbb E\|\Phi\mathbf e\|_2^2=\operatorname{tr}(\Phi\Sigma\Phi^\top)$ and, with $\Phi=U\operatorname{diag}(\sigma_i)V^\top$, $\operatorname{tr}(\Phi\Sigma\Phi^\top)=\sum_i\sigma_i^2\mathbf v_i^\top\Sigma\mathbf v_i$. If $\sigma_i/\sigma_1\to0$ for $i\ge2$, then $\sum_i\sigma_i^2/\sigma_1^2\to1$ and $\sum_i(\sigma_i^2/\sigma_1^2)\mathbf v_i^\top\Sigma\mathbf v_i\to\mathbf v_1^\top\Sigma\mathbf v_1$, which gives the two limits. (When $\sigma_2/\sigma_1\to0$, all ratios $\sigma_i/\sigma_1$ with $i\ge2$ also vanish.)
+
+\paragraph{Proposition~\ref{prop:coherence}.} By the triangle inequality and the Cauchy--Schwarz inequality, $L_T\le Q_T\le T_{\rm eff}^{1/2}(\sum_k\|\mathbf q_k\|_2^2)^{1/2}$ with $T_{\rm eff}=Q_T^2/\sum_k\|\mathbf q_k\|_2^2$, which is an identity; the first inequality is an equality if and only if the nonzero $\mathbf q_k$ are positively collinear. This proves (i). Statement (ii) follows from $L_T^2=\sum_k\|\mathbf q_k\|_2^2+2\sum_{j<k}\mathbf q_j^\top\mathbf q_k$. For (iii), $\Phi_k=I$ gives $\delta^{\rm lin}_T=\sum_k\mathbf e_k$; a persistent defect $\mathbf e_k=\mathbf e$ gives $L_T=T\epsilon$, and mutually orthogonal defects of norm $\epsilon$ give $L_T=T^{1/2}\epsilon$.
+
+\paragraph{Proposition~\ref{prop:attribution}.} Since $\log E_T=\sum_j\log X_j$ for every window, the bilinearity of the covariance gives
+\[
+\operatorname{Var}(\log E_T)=\operatorname{Cov}\Big(\log E_T,\sum_j\log X_j\Big)=\sum_j\operatorname{Cov}(\log E_T,\log X_j).
+\]
+The identity also holds after every $\log X_j$ is centered within groups of windows (for example, within each trained model), since the centered log-factors still add up to the centered log-error.

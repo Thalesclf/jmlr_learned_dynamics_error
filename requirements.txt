@@ -1,0 +1,7 @@
+# Tested with Python 3.13, NumPy 2.5, SciPy 1.18, pandas 3.0, Matplotlib 3.11 and pytest 9.1.
+numpy>=2.0
+scipy>=1.13
+pandas>=2.2
+matplotlib>=3.8
+pytest>=8.0
+# Optional, to load the original checkpoints with PyTorch: torch (they were trained with PyTorch 2.14.0, CPU)

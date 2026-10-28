@@ -1,0 +1,168 @@
+\section{An Exact Account of the Realized Error}
+\label{sec:accounting}
+
+The worst-case finite-time gain of the reference propagator,
+\begin{equation}
+  G_{\max}(T)=\sigma_1^2\!\left[\Phir(T,0)\right],
+  \label{eq:gmax}
+\end{equation}
+measures the largest amplification available to an infinitesimal perturbation of the initial state. Its maximizing direction is the leading right singular vector of $\Phir(T,0)$, which is the optimal perturbation of transient-growth analysis \citep{reddy1993,schmid2007}. For a forced problem, the analogous worst case is the gain of the forcing-to-error map $\mathcal L_T=[\Phi_0,\Phi_1,\ldots,\Phi_{T-1}]\in\R^{d\times dT}$,
+\begin{equation}
+  \|\delta^{\rm lin}_T\|_2\le\|\mathcal L_T\|_2\Big(\sum_k\|\mathbf e_k\|_2^2\Big)^{1/2},
+  \qquad
+  \|\mathcal L_T\|_2^2=\lambda_{\max}\Big(\sum_k\Phi_k\Phi_k^\top\Big),
+  \label{eq:forced_gain}
+\end{equation}
+whose square is the largest eigenvalue of the finite-time controllability Gramian, the quantity that generalized stability theory associates with optimal forcing \citep{farrell1996b}. Both quantities describe what the learned dynamics could do to some perturbation or forcing. The rollout error, on the other hand, is produced by one particular sequence of defects. This section decomposes the rollout error into the magnitude of that sequence and a few dimensionless factors that measure how much of the available amplification it realizes.
+
+\subsection{Five-factor factorization}
+
+Let $\sigma_1(\Phi_k)$ be the leading singular value of the tail propagator and define the totals
+\begin{equation}
+  S_T=\sum_{k=0}^{T-1}\|\mathbf e_k\|_2,
+  \qquad
+  B_T=\sum_{k=0}^{T-1}\sigma_1(\Phi_k)\,\|\mathbf e_k\|_2,
+  \qquad
+  Q_T=\sum_{k=0}^{T-1}\|\mathbf q_k\|_2,
+  \label{eq:totals}
+\end{equation}
+together with $L_T=\|\delta^{\rm lin}_T\|_2$ and the rollout error $E_T=\|\delta_T\|_2$. By the triangle inequality and the definition of the spectral norm, $L_T\le Q_T\le B_T$, so that $B_T$ is the first-order worst-case bound on the error produced by the actual defect magnitudes.
+
+\begin{proposition}[Exact factorization]
+\label{prop:factorization}
+If the defects and the first-order error are nonzero,
+\begin{equation}
+  \boxed{\;E_T=S_T\cdot\bar g_T\cdot\eta_T\cdot C_T\cdot N_T,\;}
+  \label{eq:factorization}
+\end{equation}
+with
+\begin{equation}
+  \bar g_T=\frac{B_T}{S_T}=\sum_k w_k\,\sigma_1(\Phi_k),
+  \qquad
+  \eta_T=\frac{Q_T}{B_T}=\sum_k v_k\,\eta_k,
+  \qquad
+  C_T=\frac{L_T}{Q_T},
+  \qquad
+  N_T=\frac{E_T}{L_T},
+  \label{eq:factors}
+\end{equation}
+where $w_k=\|\mathbf e_k\|_2/S_T$ and $v_k=\sigma_1(\Phi_k)\|\mathbf e_k\|_2/B_T$ are weights summing to one, and
+\begin{equation}
+  \eta_k=\frac{\|\Phi_k\mathbf e_k\|_2}{\sigma_1(\Phi_k)\,\|\mathbf e_k\|_2}\in[a_k,1],
+  \qquad
+  a_k=\frac{|\mathbf v_{k1}^\top\mathbf e_k|}{\|\mathbf e_k\|_2},
+  \label{eq:gain_efficiency}
+\end{equation}
+is the efficiency of the defect injected at step $k$, $a_k$ its alignment with the leading right singular vector $\mathbf v_{k1}$ of $\Phi_k$. Moreover $\eta_T\in(0,1]$ and $C_T\in[0,1]$.
+\end{proposition}
+
+The product telescopes, and the bounds follow from $\|\Phi_k\mathbf e_k\|_2^2=\sum_i\sigma_{ki}^2(\mathbf v_{ki}^\top\mathbf e_k)^2\ge\sigma_{k1}^2a_k^2\|\mathbf e_k\|_2^2$ and from the triangle inequality (Appendix~\ref{app:proofs}). The five factors have a direct interpretation. $S_T$ is the total defect injected along the window, $\bar g_T$ is the worst-case tail gain seen by a typical unit of defect, $\eta_T$ measures how much of that gain the actual defect directions realize, $C_T$ measures how much of the transported magnitude survives the vector sum, and $N_T=R_{\rm lin}^{-1}$, with $R_{\rm lin}=L_T/E_T$, measures the departure from the first-order description. The product $S_T\bar g_T=B_T$ is a worst-case estimate, and the remaining factors are the attenuations that turn it into the realized error.
+
+\subsection{Null models for the efficiency}
+
+Small values of $\eta_T$ do not by themselves indicate that the defects avoid the amplified directions, since a generic vector projects weakly on a single direction in high dimension. The efficiency is therefore compared with the value expected for random defects.
+
+\begin{proposition}[Isotropic and covariance-matched efficiencies]
+\label{prop:nulls}
+Let $\Phi\in\R^{d\times d}$ have singular values $\sigma_1\ge\cdots\ge\sigma_d$ and right singular vectors $\mathbf v_i$.
+\begin{enumerate}
+\item If $\mathbf u$ is uniformly distributed on the unit sphere, $\mathbb E\|\Phi\mathbf u\|_2^2=\|\Phi\|_F^2/d$, and the root-mean-square efficiency of a random direction is
+\begin{equation}
+  \eta^{\rm iso}(\Phi)=\frac{(\mathbb E\|\Phi\mathbf u\|_2^2)^{1/2}}{\sigma_1}=\left(\frac{r(\Phi)}{d}\right)^{1/2},
+  \qquad
+  r(\Phi)=\frac{\|\Phi\|_F^2}{\sigma_1^2}\in[1,d],
+  \label{eq:eta_iso}
+\end{equation}
+where $r(\Phi)$ is the stable rank.
+\item If $\mathbf e$ is a random vector with second moment $\Sigma=\mathbb E[\mathbf e\mathbf e^\top]$, then $\mathbb E\|\Phi\mathbf e\|_2^2=\operatorname{tr}(\Phi\Sigma\Phi^\top)=\sum_i\sigma_i^2\,\mathbf v_i^\top\Sigma\mathbf v_i$, and the covariance-matched efficiency is
+\begin{equation}
+  \eta^{\Sigma}(\Phi)=\frac{g_\Sigma(\Phi)}{\sigma_1},
+  \qquad
+  g_\Sigma(\Phi)=\left(\frac{\operatorname{tr}(\Phi\Sigma\Phi^\top)}{\operatorname{tr}\Sigma}\right)^{1/2}.
+  \label{eq:eta_cov}
+\end{equation}
+\item If $\sigma_2/\sigma_1\to0$, then $\eta^{\rm iso}\to d^{-1/2}$ and $\eta^{\Sigma}\to(\mathbf v_1^\top\Sigma\mathbf v_1/\operatorname{tr}\Sigma)^{1/2}$.
+\end{enumerate}
+\end{proposition}
+
+The proof is given in Appendix~\ref{app:proofs}. The gain $g_\Sigma$ is the variance amplification of a perturbation with covariance $\Sigma$, the quantity used by generalized stability theory for stochastically forced dynamics \citep{farrell1996a,farrell1996b}. In the third statement, $\mathbf v_1$ is the leading right singular vector of a long tail propagator, which approaches the leading forward Lyapunov vector at the injection time \citep{legras1996,kuptsov2012}, so that, at long horizons, the efficiency of random defects measures the fraction of the defect variance carried along that vector.
+
+The closed forms of Proposition~\ref{prop:nulls} are root-mean-square gains, whereas $\eta_k$ is a ratio of norms. By Jensen's inequality, $\mathbb E[\|\Phi\mathbf u\|_2/\|\mathbf u\|_2]\le(\mathbb E[\|\Phi\mathbf u\|_2^2/\|\mathbf u\|_2^2])^{1/2}$, and the gap is not small. For a rank-one propagator and Gaussian $\mathbf u$ in high dimension, the ratio between the two approaches $(2/\pi)^{1/2}\approx0.80$, which is the typical regime of long tails, so that the efficiency is compared with the mean norm gain
+\begin{equation}
+  \bar g_\Sigma(\Phi)=\mathbb E\left[\frac{\|\Phi\mathbf u\|_2}{\|\mathbf u\|_2}\right],
+  \qquad \mathbf u\sim\mathcal N(\mathbf 0,\Sigma),
+  \label{eq:mean_gain}
+\end{equation}
+which is estimated with 64 Monte Carlo draws per tail propagator (the same draws for all propagators of a window), and the window-level null and orientation ratio are
+\begin{equation}
+  \eta^{\Sigma}_T=\frac{1}{B_T}\sum_k \bar g_\Sigma(\Phi_k)\,\|\mathbf e_k\|_2,
+  \qquad
+  \alpha_T=\frac{\eta_T}{\eta^{\Sigma}_T}=\frac{Q_T}{\sum_k\bar g_\Sigma(\Phi_k)\,\|\mathbf e_k\|_2}.
+  \label{eq:alpha}
+\end{equation}
+The isotropic null $\eta^{\rm iso}_T$ uses $\Sigma=I$. The orientation ratio $\alpha_T$ is close to one when the defects of a window are oriented like random vectors with the same second moment and magnitudes, and exceeds one when they are better aligned with the amplified directions. In the experiments, $\Sigma$ is estimated from the defects of the surrogate on an independent trajectory, so that $\eta^\Sigma_T$ uses only information available before the forecast.
+
+\subsection{Cancellation, coherence and the number of contributions}
+
+The cancellation ratio $C_T$ depends on how many contributions of comparable size enter the sum and on how they are oriented with respect to each other. These two effects are separated by writing
+\begin{equation}
+  C_T=\frac{\kappa_T}{T_{\rm eff}^{1/2}},
+  \qquad
+  T_{\rm eff}=\frac{Q_T^2}{\sum_k\|\mathbf q_k\|_2^2}\in[1,T],
+  \qquad
+  \kappa_T=\frac{L_T}{\left(\sum_k\|\mathbf q_k\|_2^2\right)^{1/2}},
+  \label{eq:coherence}
+\end{equation}
+where $T_{\rm eff}$ is the effective number of injection times that contribute to the error and $\kappa_T$ is a coherence factor.
+
+\begin{proposition}[Coherent and incoherent composition]
+\label{prop:coherence}
+(i) $0\le\kappa_T\le T_{\rm eff}^{1/2}$, with $\kappa_T=T_{\rm eff}^{1/2}$ if and only if all nonzero $\mathbf q_k$ are positively collinear. (ii) If the $\mathbf q_k$ are random with $\mathbb E[\mathbf q_j^\top\mathbf q_k]=0$ for $j\ne k$, then $\mathbb E L_T^2=\sum_k\mathbb E\|\mathbf q_k\|_2^2$, and $\kappa_T=1$ is the incoherent reference. (iii) If $\Phi_k\approx I$ and $\|\mathbf e_k\|_2=\epsilon$ for all $k$, a persistent defect gives $L_T\approx T\epsilon$, whereas mutually uncorrelated defects give $L_T\approx T^{1/2}\epsilon$.
+\end{proposition}
+
+The third statement recovers the two short-time regimes of model-error growth discussed by \citet{vannitsem2002}, in which the mean-square error grows quadratically for a persistent or slowly varying error source and linearly for a white one. The coherence factor generalizes this distinction to arbitrary horizons, with $\kappa_T=T_{\rm eff}^{1/2}$ for perfectly coherent transported defects and $\kappa_T\approx1$ for incoherent ones.
+
+A coherent sum can have two different causes. The defects may share a nonzero mean, that is, a systematic bias of the surrogate, or they may be correlated in time because consecutive states of the trajectory are close and the defect is a smooth function of the state. The two causes are separated by the coherence expected for defects drawn independently at every step from a distribution with the mean $\boldsymbol\mu$ and the second moment $\Sigma$ of the actual defects. For such defects,
+\begin{equation}
+  \mathbb E\,L_T^2=\sum_k\operatorname{tr}\!\left(\Phi_k(\Sigma-\boldsymbol\mu\boldsymbol\mu^\top)\Phi_k^\top\right)+\Big\|\sum_k\Phi_k\boldsymbol\mu\Big\|_2^2,
+  \qquad
+  \mathbb E\sum_k\|\mathbf q_k\|_2^2=\sum_k\operatorname{tr}\!\left(\Phi_k\Sigma\Phi_k^\top\right),
+  \label{eq:kappa_iid}
+\end{equation}
+and the bias-only coherence is $\kappa^{\rm iid}_T=(\mathbb E L_T^2/\mathbb E\sum_k\|\mathbf q_k\|_2^2)^{1/2}$. It equals one for unbiased defects and grows with the transported bias $\sum_k\Phi_k\boldsymbol\mu$. The ratio $\kappa_T/\kappa^{\rm iid}_T$ measures the coherence produced by the temporal correlation of the defects along the trajectory. Equation~\eqref{eq:kappa_iid} follows from $\mathbb E[\mathbf q_j^\top\mathbf q_k]=\boldsymbol\mu^\top\Phi_j^\top\Phi_k\boldsymbol\mu$ for $j\neq k$.
+
+\subsection{Occupation of the singular spectrum}
+
+For a tail propagator with singular value decomposition $\Phi_k=U_k\Sigma_kV_k^\top$ and coefficients $c_{ki}=\mathbf v_{ki}^\top\mathbf e_k$, the transported energy decomposes exactly as $\|\Phi_k\mathbf e_k\|_2^2=\sum_i\sigma_{ki}^2c_{ki}^2$. The fractions
+\begin{equation}
+  \begin{gathered}
+  p_{ki}=\frac{\sigma_{ki}^2c_{ki}^2}{\sum_j\sigma_{kj}^2c_{kj}^2},
+  \qquad
+  P_{k,m}=\sum_{i=1}^{m}p_{ki},
+  \\
+  m_{90,k}=\min\{m:P_{k,m}\ge0.9\},
+  \qquad
+  N_{{\rm part},k}=\Big(\sum_ip_{ki}^2\Big)^{-1},
+  \end{gathered}
+  \label{eq:spectral}
+\end{equation}
+describe how many singular directions carry the transported energy of a defect. Fractions inside exactly degenerate singular subspaces depend on the basis and are interpreted at the subspace level only. For an isotropic random defect, $\mathbb E[c_{ki}^2]$ does not depend on $i$, so that $p_{ki}$ is, on average, proportional to $\sigma_{ki}^2$. Any concentration of the transported energy that follows the spreading of the singular values is therefore expected for arbitrary defects. Statistics of actual defects are compared with Monte Carlo draws of isotropic and covariance-matched random defects under the same tail propagators.
+
+\subsection{Attribution of error variability}
+
+Since Eq.~\eqref{eq:factorization} is a product, its logarithm is a sum, and the variability of the log-error across forecast windows can be attributed to the factors exactly.
+
+\begin{proposition}[Covariance attribution]
+\label{prop:attribution}
+For any collection of windows with $\log E_T=\sum_j\log X_j$,
+\begin{equation}
+  \operatorname{Var}(\log E_T)=\sum_j\operatorname{Cov}(\log E_T,\log X_j),
+  \qquad
+  s_j=\frac{\operatorname{Cov}(\log E_T,\log X_j)}{\operatorname{Var}(\log E_T)},
+  \qquad
+  \sum_js_j=1.
+  \label{eq:shares}
+\end{equation}
+\end{proposition}
+
+The share $s_j$ is the slope of the regression of $\log X_j$ on $\log E_T$, and a negative share identifies a factor that compensates the others. The decomposition holds for any refinement of the factors, and it is applied to $\{S_T,\bar g_T,\eta_T,C_T,N_T\}$ and to the refined set obtained with $\eta_T=\eta^\Sigma_T\alpha_T$ and $C_T=\kappa_T\,T_{\rm eff}^{-1/2}$. The shares are computed after the log-factors are centered within each trained model, so that they describe the differences between forecasts of a given surrogate and do not mix in the differences of accuracy between independently trained surrogates. The same identity, applied to the difference of log-errors between two models evaluated on the same windows, attributes the effect of a change of training objective (Section~\ref{sec:res_intervention}).

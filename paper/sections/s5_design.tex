@@ -1,0 +1,55 @@
+\section{Experimental Design}
+\label{sec:design}
+
+\subsection{Reference systems and horizons}
+
+The first system is the Lorenz--96 model \citep{lorenz1996} with $d=20$ and forcing $F=8$, integrated with the fourth-order Runge--Kutta method and $\Delta t=0.01$. The second is the Kuramoto--Sivashinsky equation
+\begin{equation}
+  u_t+uu_x+u_{xx}+u_{xxxx}=0
+  \label{eq:ks}
+\end{equation}
+on a periodic domain of length $L=22$, discretized with $N=64$ Fourier modes, de-aliased with the $2/3$ rule and integrated with the ETDRK4 scheme of \citet{kassam2005} with $\Delta t=0.25$. The domain $L=22$ is the smallest one with sustained chaos studied in detail by \citet{cvitanovic2010}.
+
+Horizons are reported in Lyapunov times, $\Lambda=\lambda_1T\Delta t$, where $\lambda_1$ is the leading Lyapunov exponent of the reference map. The QR method of \citet{benettin1980}, applied to the exact tangent maps along three trajectories of $10^5$ (Lorenz--96) and $4\times10^4$ steps (Kuramoto--Sivashinsky), gives $\lambda_1=1.565\pm0.008$ and $0.0494\pm0.0006$ (mean and standard deviation), so that one Lyapunov time corresponds to 64 steps of Lorenz--96 and 81 steps of Kuramoto--Sivashinsky. The diagnostic horizons are $T\in\{1,2,5,10,20,40,80,160,320\}$ for Lorenz--96 ($0.016\le\Lambda\le5.0$) and $T\in\{1,2,4,\ldots,256\}$ for Kuramoto--Sivashinsky ($0.012\le\Lambda\le3.2$), so that both systems are followed until the error saturates.
+
+\subsection{Surrogates}
+
+The Lorenz--96 surrogate is a residual MLP, $f_\theta(\mathbf x)=\mathbf x+g_\theta(\mathbf x)$, where $g_\theta$ has two $\tanh$ hidden layers of width 128 \citep{he2016}. For every seed $s\in\{0,\ldots,4\}$, a trajectory of $20{,}000$ states is generated after $2{,}000$ burn-in steps, split chronologically into $70\%$ for training and $30\%$ for testing, and standardized componentwise with training statistics. Three optimization budgets are compared, with the same data and architecture. The L96-20 surrogates are trained for 20 epochs with Adam, a constant learning rate of $10^{-3}$ and batch size 512, a budget that leaves the optimization far from convergence and is included to show the behavior of an under-trained surrogate. The L96-150 and L96-2000 surrogates are trained for 150 and 2000 epochs with batch size 256 and a learning rate decayed from $10^{-3}$ to $10^{-5}$ with a cosine schedule. Unless stated otherwise, ``L96'' refers to the L96-2000 surrogates.
+
+The Kuramoto--Sivashinsky surrogate is a one-dimensional FNO \citep{li2021} with 16 retained modes, width 32, four spectral layers with GELU activations and a projection head of width 64. Five FNOs with different initializations were trained for 50 epochs (Adam, learning rate $10^{-3}$, batch size 128) on a common trajectory of $12{,}000$ one-step pairs, with a single scalar normalization. The five FNOs are analyzed without modification.
+
+\subsection{Diagnostic campaign}
+
+For every surrogate, 100 initial states are taken at equal spacing along a held-out trajectory: the test segment of the training trajectory for Lorenz--96 and an independent trajectory of $10^4$ steps for Kuramoto--Sivashinsky. For every initial state and horizon, the rollout error, the defects, the reference-trajectory Jacobians and the full singular value decomposition of every tail propagator are computed, which gives $4{,}500$ windows and $319{,}000$ defect--tail pairs per Lorenz--96 surrogate family and $4{,}500$ windows and $255{,}500$ pairs for Kuramoto--Sivashinsky. The defect second moment $\Sigma$ and the mean defect $\boldsymbol\mu$ are estimated, for every surrogate, from its defects on an independent trajectory ($6{,}000$ steps for Lorenz--96 and $4{,}000$ steps for Kuramoto--Sivashinsky).
+
+All diagnostics were computed with a NumPy implementation that is independent of the PyTorch code used to train the surrogates and reproduces a PyTorch diagnostic campaign with relative differences below $10^{-13}$ (Appendix~\ref{app:repro}).
+
+\subsection{Statistics}
+
+Rank correlations are Spearman correlations computed at fixed horizon over all windows of a surrogate family. Windows that share a seed are not independent replicates, and the correlations and variance shares are therefore descriptive. Uncertainty intervals for the variance shares are obtained with a two-level bootstrap that resamples seeds and then initial states within seeds. For the fine-tuning study, the trained model is the unit of replication, and comparisons are paired within seed.
+
+\subsection{Reference-free error estimates}
+\label{sec:design_ensemble}
+
+The defects and the reference propagators require the future reference trajectory, so that the analysis above is retrospective. The five surrogates of every family were trained independently, which provides a stand-in for the unknown reference map. For member $s$, the leave-one-out mean $\bar f_{-s}$ of the other four surrogates replaces the reference map, and the defect proxy along the free rollout $\hat{\mathbf x}_k$ of member $s$ is
+\begin{equation}
+  \hat{\mathbf e}_k=f_s(\hat{\mathbf x}_k)-\bar f_{-s}(\hat{\mathbf x}_k).
+  \label{eq:proxy}
+\end{equation}
+Three scores are computed from the initial state alone. The proxy magnitude is $\hat S_T=\sum_k\|\hat{\mathbf e}_k\|_2$. The propagated proxy is $\hat L_T=\|\mathbf d_T\|_2$, where $\mathbf d_{k+1}=Df_s(\hat{\mathbf x}_k)\,\mathbf d_k+\hat{\mathbf e}_k$ and $\mathbf d_0=\mathbf 0$, which is the forced recursion of Eq.~\eqref{eq:error_recursion} with the model-trajectory propagator and costs one Jacobian--vector product per step. The ensemble spread is $D_T=\|\hat{\mathbf x}^s_T-\frac14\sum_{j\ne s}\hat{\mathbf x}^j_T\|_2$, the distance between the forecast of member $s$ and the mean forecast of the other members, which is the nonlinear counterpart of $\hat L_T$. The scores are compared with the rollout error through within-seed rank correlations, through the AUROC for the 10\% largest errors of each seed and through the median ratio between score and error. If the errors of different members were independent and identically distributed, the proxy would have a norm $(1+1/4)^{1/2}=1.12$ times that of the true defect and a cosine of $0.89$ with it. Notice that the Lorenz--96 surrogates were trained on five different trajectories, whereas the FNOs share one trajectory and differ only in their initialization. The proxy is also compared with two scores that use only the defect statistics, $S^{\rm white}_T=(\sum_k\operatorname{tr}\Phi^{\rm mdl}_k\Sigma\Phi^{\rm mdl\top}_k)^{1/2}$ and the worst-case gain of the model-trajectory propagator, where $\Phi^{\rm mdl}_k$ are the tail propagators along the free rollout.
+
+\subsection{Fine-tuning study}
+\label{sec:design_intervention}
+
+For every pretrained seed, two arms start from the same checkpoint and see the same stream of training windows. The control arm minimizes the one-step mean-square error, and the rollout arm adds the final-horizon error of the autonomous $H$-step rollout,
+\begin{equation}
+  \mathcal L=\mathcal L_{\rm one}+\lambda\,s\,R_H,
+  \qquad
+  R_H=\mathbb E_{\rm batch}\Big[\tfrac1d\|f_\theta^{(H)}(\mathbf x_0)-\mathbf x_H\|_2^2\Big],
+  \label{eq:rollout_loss}
+\end{equation}
+where the fixed scale $s$ matches $R_H$ to the one-step loss at the initial checkpoint. The L96-20 surrogates and the FNOs are fine-tuned with a short protocol, in which both arms use 60 Adam updates with learning rate $3\times10^{-5}$, gradient clipping at one and batches of 8 (Lorenz--96) or 2 (Kuramoto--Sivashinsky) windows. Checkpoints are compared every 15 updates on an independent validation trajectory through the mean-square error at $T=16$ and $T=32$, and the initial checkpoint competes with them. The horizon $H\in\{4,8,16\}$ and the weight $\lambda\in\{0.01,0.03,0.1,0.3\}$ were selected on validation data only, which gave $H=16$ with $\lambda=0.3$ for the L96-20 surrogates and $H=16$ with $\lambda=0.03$ for the FNOs.
+
+The same protocol does not change the L96-2000 surrogates. Neither arm improved the validation error of any seed for any $(H,\lambda)$, neither with this budget nor with 600 updates at learning rate $10^{-4}$, so that the selection returned the initial checkpoint in all cases. These surrogates were trained with large batches and a learning rate decayed to $10^{-5}$, and a restarted optimizer with small batches perturbs them more than it improves them. Their two arms are therefore compared with a continued-training protocol, with 1000 Adam updates on batches of 64 windows, a learning rate decayed from $10^{-4}$ to $10^{-6}$ with a cosine schedule, gradient clipping at one and validation every 100 updates. The validation sweep over $H\in\{8,16,32\}$ and $\lambda\in\{0.3,1,3\}$ selected $H=16$ and $\lambda=1$.
+
+Every matched pair is evaluated on 312 non-overlapping windows of an independent trajectory of $4\times10^4$ steps, with window-bootstrap intervals for the paired change of every seed, and on the 100 windows of the diagnostic campaign, which allows the factorization of Section~\ref{sec:accounting} to be applied to the difference between the two arms.

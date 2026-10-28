@@ -1,0 +1,11 @@
+\section{Model-Trajectory Stress Test}
+\label{app:stress}
+
+The model-trajectory propagator of Eq.~\eqref{eq:model_propagator} predicts that, for small perturbation amplitudes, the perturbation of the initial state that maximizes the separation of two learned rollouts after $T$ steps is its leading right singular vector $\mathbf v_1^{\rm mdl}$. This prediction is tested with projected gradient ascent (PGD) on
+\begin{equation}
+  \max_{\|\boldsymbol\epsilon\|_2\le\varepsilon}\ \big\|f_\theta^{(T)}(\mathbf x_0+\boldsymbol\epsilon)-f_\theta^{(T)}(\mathbf x_0)\big\|_2^2,
+  \label{eq:pgd}
+\end{equation}
+with five random restarts, none of which is initialized at $\mathbf v_1^{\rm mdl}$. The nonlinear gain of a unit direction $\mathbf v$ is $G_{\rm NL}(\varepsilon,\mathbf v)=\|f_\theta^{(T)}(\mathbf x_0+\varepsilon\mathbf v)-f_\theta^{(T)}(\mathbf x_0)\|_2^2/\varepsilon^2$. The test uses the L96-2000 surrogates, $T=20$, 20 initial states per seed (100 windows), 200 ascent steps per restart and amplitudes $\varepsilon$ from $10^{-4}$ to $1$. In standardized coordinates, $\varepsilon=1$ corresponds to $20^{-1/2}=22\%$ of the root-mean-square size of the state fluctuations.
+
+At $\varepsilon=10^{-2}$, the mean nonlinear gains of the leading singular direction, of the second singular direction, of a random direction and of the PGD optimum are $9.39$, $6.72$, $1.77$ and $9.40$, and the best of 20 random directions reaches $3.51$. The median alignment $|\mathbf v_1^{{\rm mdl}\top}\mathbf v_{\rm PGD}|$ is $0.999996$, and the median ratio between the two gains is $0.9998$. The median alignment is still $0.9996$ at $\varepsilon=0.1$ and $0.997$ at $\varepsilon=0.3$, and the PGD gain normalized by $\sigma_1^2(\Phim)$ stays within $1.2\%$ of one. At $\varepsilon=1$, the median alignment drops to $0.966$, with a 10\% quantile of $0.82$, and the gain of $\mathbf v_1^{\rm mdl}$ falls to $0.85\,\sigma_1^2$, whereas PGD still finds directions with $0.97\,\sigma_1^2$. The leading singular vector of the model-trajectory propagator therefore describes the most dangerous perturbation of the learned rollout accurately up to about 7\% of the root-mean-square size of the state fluctuations ($\varepsilon=0.3$).

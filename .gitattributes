@@ -1,0 +1,11 @@
+# The saved results and the generated tables, figures and plot data are checked
+# against SHA256SUMS.txt, so their bytes must not change on checkout.
+results/** -text
+tables/** -text
+data/processed/** -text
+figures/** -text
+*.pdf binary
+*.npz binary
+*.gz binary
+*.zip binary
+*.pt binary

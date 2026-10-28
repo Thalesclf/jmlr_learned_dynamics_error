@@ -1,0 +1,60 @@
+\section{Forced Error Recursion and Finite-Time Propagators}
+\label{sec:formulation}
+
+Let the reference dynamics and the learned one-step surrogate be the discrete maps
+\begin{align}
+  \mathbf x_{k+1} &= F(\mathbf x_k), \label{eq:true_map}\\
+  \hat{\mathbf x}_{k+1} &= f_\theta(\hat{\mathbf x}_k), \label{eq:learned_map}
+\end{align}
+with $\mathbf x_k,\hat{\mathbf x}_k\in\R^d$. The accumulated rollout error and the local defect are
+\begin{equation}
+  \delta_k=\hat{\mathbf x}_k-\mathbf x_k,
+  \qquad
+  \mathbf e_k=f_\theta(\mathbf x_k)-F(\mathbf x_k)=f_\theta(\mathbf x_k)-\mathbf x_{k+1}.
+  \label{eq:delta_defect}
+\end{equation}
+The defect $\mathbf e_k$ is the error made by the surrogate in a single step when it is fed the correct state, whereas $\delta_k$ is the error accumulated after the surrogate has been fed its own outputs.
+
+\subsection{Reference-trajectory linearization}
+
+Let $\Jr_k=Df_\theta(\mathbf x_k)$ be the Jacobian of the surrogate at the reference state. A Taylor expansion of $f_\theta(\mathbf x_k+\delta_k)$ about $\mathbf x_k$ gives the forced error recursion
+\begin{equation}
+  \delta_{k+1}=\Jr_k\delta_k+\mathbf e_k+\mathbf r_k,
+  \qquad
+  \mathbf r_k=f_\theta(\mathbf x_k+\delta_k)-f_\theta(\mathbf x_k)-\Jr_k\delta_k,
+  \label{eq:error_recursion}
+\end{equation}
+where $\mathbf r_k$ contains the second- and higher-order terms. For $s_2>s_1$, the ordered reference-trajectory propagator is
+\begin{equation}
+  \Phir(s_2,s_1)=\Jr_{s_2-1}\Jr_{s_2-2}\cdots\Jr_{s_1},
+  \qquad \Phir(s,s)=I.
+  \label{eq:reference_propagator}
+\end{equation}
+Without loss of generality, the forecast window starts at $k=0$ and ends at $k=T$. Repeated substitution of Eq.~\eqref{eq:error_recursion} gives the exact identity (Appendix~\ref{app:derivation})
+\begin{equation}
+\delta_{T}=\Phir(T,0)\,\delta_0+\sum_{k=0}^{T-1}\Phi_k\left(\mathbf e_{k}+\mathbf r_{k}\right),
+\qquad
+\Phi_k:=\Phir(T,k+1),
+\label{eq:error_decomposition}
+\end{equation}
+where $\Phi_k$ is the tail propagator that transports a defect injected at step $k$ to the forecast time. A rollout initialized on the reference state has $\delta_0=0$, so that, neglecting the remainders,
+\begin{equation}
+  \boxed{\;
+  \delta^{\rm lin}_{T}=\sum_{k=0}^{T-1}\mathbf q_k,
+  \qquad
+  \mathbf q_k=\Phi_k\mathbf e_k.
+  \;}
+  \label{eq:linear_error_prediction}
+\end{equation}
+In Eq.~\eqref{eq:linear_error_prediction}, the defects act as forcing terms, the tail propagators transport them to a common time, and the transported vectors are summed. The difference $\delta_T-\delta^{\rm lin}_T=\sum_k\Phi_k\mathbf r_k$ is computed explicitly in the experiments, so that the validity of the first-order description is measured rather than assumed. A local bound on $\mathbf r_k$ is given in Appendix~\ref{app:remainder}.
+
+Equation~\eqref{eq:linear_error_prediction} is the global-error formula of numerical analysis \citep[Section~II.3]{hairer1993} and the discrete form of the model-error equation of predictability studies \citep{nicolis2003,vannitsem2002,carrassi2008}, with the approximation error of the network in place of a truncation error or a prescribed random process.
+
+\subsection{Model-trajectory propagator}
+
+A second propagator describes perturbations of the learned rollout itself. With $\bar{\mathbf x}_0=\mathbf x_0$ and $\bar{\mathbf x}_{j+1}=f_\theta(\bar{\mathbf x}_j)$,
+\begin{equation}
+  \Phim(T,0)=Df_\theta(\bar{\mathbf x}_{T-1})\cdots Df_\theta(\bar{\mathbf x}_0)=Df_\theta^{(T)}(\mathbf x_0).
+  \label{eq:model_propagator}
+\end{equation}
+The reference propagator $\Phir$ appears in the expansion of the ordinary rollout error about the reference trajectory, whereas $\Phim$ is the derivative of the autonomous rollout and is the appropriate object for perturbations of the initial condition or for adversarial stress tests. The two coincide only while the rollout remains close to the reference, and $\Phim$ is used in Section~\ref{sec:design_ensemble} and Appendix~\ref{app:stress}.

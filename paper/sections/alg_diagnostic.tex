@@ -1,0 +1,18 @@
+\begin{algorithm}[t]
+\caption{Realized-error budget of one forecast window}
+\label{alg:diagnostic}
+\begin{algorithmic}[1]
+\REQUIRE reference states $\mathbf x_0,\ldots,\mathbf x_T$, surrogate $f_\theta$, defect second moment $\Sigma$
+\STATE Roll out $\hat{\mathbf x}_{k+1}=f_\theta(\hat{\mathbf x}_k)$ from $\hat{\mathbf x}_0=\mathbf x_0$ and set $E_T=\|\hat{\mathbf x}_T-\mathbf x_T\|_2$.
+\STATE Compute $\mathbf e_k=f_\theta(\mathbf x_k)-\mathbf x_{k+1}$ and $\Jr_k=Df_\theta(\mathbf x_k)$ for $k=0,\ldots,T-1$.
+\STATE $P\leftarrow I$, $\delta^{\rm lin}\leftarrow0$, $S,B,Q,Q_2,B^\Sigma\leftarrow0$.
+\FOR{$k=T-1$ down to $0$}
+  \STATE $\mathbf q_k\leftarrow P\mathbf e_k$; $\delta^{\rm lin}\leftarrow\delta^{\rm lin}+\mathbf q_k$
+  \STATE $S\mathrel{+}=\|\mathbf e_k\|$; $B\mathrel{+}=\sigma_1(P)\|\mathbf e_k\|$; $Q\mathrel{+}=\|\mathbf q_k\|$; $Q_2\mathrel{+}=\|\mathbf q_k\|^2$
+  \STATE $B^\Sigma\mathrel{+}=\big(\operatorname{tr}(P\Sigma P^\top)/\operatorname{tr}\Sigma\big)^{1/2}\|\mathbf e_k\|$ \hfill (covariance null)
+  \STATE optionally: singular value decomposition of $P$, modal fractions $p_{ki}$ and Monte Carlo null statistics
+  \STATE $P\leftarrow P\,\Jr_k$
+\ENDFOR
+\STATE $L\leftarrow\|\delta^{\rm lin}\|$; return $\bar g=B/S$, $\eta=Q/B$, $C=L/Q$, $N=E_T/L$, $\eta^\Sigma=B^\Sigma/B$, $T_{\rm eff}=Q^2/Q_2$, $\kappa=L/Q_2^{1/2}$.
+\end{algorithmic}
+\end{algorithm}

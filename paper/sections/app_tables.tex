@@ -1,0 +1,46 @@
+\section{Horizon-by-Horizon Diagnostics}
+\label{app:tables}
+
+Tables~\ref{tab:h_l96}--\ref{tab:h_ks} list the diagnostics of every surrogate family at every horizon; correlations are medians over seeds of within-seed Spearman correlations with $E_T$ ($\rho_G$ for $G_{\max}$, $\rho_{\mathcal L}$ for the forced gain $\|\mathcal L_T\|_2$, $\rho_S$ for $S_T$ and $\rho_L$ for $L_T$). At $T=1$, the forced gain equals one in every window, and $\rho_{\mathcal L}$ is not defined. The remaining columns are medians over all windows, with $\eta^\Sigma_T$ and $\alpha_T$ computed with the mean norm gains of Eq.~\eqref{eq:mean_gain} and $\kappa^{\rm iid}_T$ from Eq.~\eqref{eq:kappa_iid}. Table~\ref{tab:shares} lists the within-seed variance shares, with the efficiency split into the covariance null and the orientation ratio, $\log\eta_T=\log\eta^\Sigma_T+\log\alpha_T$, and Table~\ref{tab:intervention_seeds} lists the paired effects of the fine-tuning study for every seed.
+
+\begin{table}[h]
+\centering\scriptsize
+\caption{L96-2000 surrogates.}
+\label{tab:h_l96}
+\resizebox{\textwidth}{!}{\input{tables/tab_horizons_l96_e2000}}
+\end{table}
+
+\begin{table}[h]
+\centering\scriptsize
+\caption{L96-150 surrogates.}
+\label{tab:h_l96_150}
+\resizebox{\textwidth}{!}{\input{tables/tab_horizons_l96_e150}}
+\end{table}
+
+\begin{table}[h]
+\centering\scriptsize
+\caption{L96-20 surrogates.}
+\label{tab:h_l96_20}
+\resizebox{\textwidth}{!}{\input{tables/tab_horizons_l96_e20}}
+\end{table}
+
+\begin{table}[h]
+\centering\scriptsize
+\caption{Kuramoto--Sivashinsky FNOs.}
+\label{tab:h_ks}
+\resizebox{\textwidth}{!}{\input{tables/tab_horizons_ks_pre}}
+\end{table}
+
+\begin{table}[h]
+\centering\scriptsize
+\caption{Variance shares of the log-error (Proposition~\ref{prop:attribution}) at horizons where the median error is below half of the saturation level.}
+\label{tab:shares}
+\input{tables/tab_shares}
+\end{table}
+
+\begin{table}[h]
+\centering\scriptsize
+\caption{Paired change of the test relative RMSE (\%) between the rollout and the one-step arms for every seed, over 312 non-overlapping windows of a common held-out trajectory, with window-bootstrap 95\% intervals. Negative values indicate a lower error of the rollout arm. For seed 0 of L96-2000, the validation selected the initial checkpoint in both arms.}
+\label{tab:intervention_seeds}
+\resizebox{\textwidth}{!}{\input{tables/tab_intervention_seeds}}
+\end{table}

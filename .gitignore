@@ -1,0 +1,32 @@
+# Python / build products
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+dist/
+build/
+.DS_Store
+Thumbs.db
+# Generated manuscript intermediates (keep .tex sources tracked)
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.pdf
+# Historical data restored from the release archives (docs/DATA_RELEASE.md); results/current/ is tracked
+/results/seed_*/
+/results_l96_jmlr/
+/results_ks/
+/results_intervention_final_v3/
+/results_rollout_retry_final/
+/Historical_reproduction_data*.zip
+# Standalone Overleaf export, figures drawn by scripts/generate_all_figures.m and recomputed campaigns
+/Overleaf_JMLR.zip
+/figures/matlab/
+/rerun/
+# Preview images (vector PDFs remain tracked)
+/figures/*.png

@@ -1,0 +1,7 @@
+\begin{abstract}
+Learned surrogates with small one-step errors can produce large rollout errors. The current work quantifies how much of the amplification available in the learned dynamics is realized by the defects of the surrogate. To first order, the rollout error is a sum of transported one-step defects, and an exact factorization separates their magnitude, the worst-case propagator gain, the gain efficiency, their cancellation and a nonlinear remainder. For residual multilayer perceptrons trained on Lorenz--96 and Fourier neural operators trained on Kuramoto--Sivashinsky, the worst-case estimate is five to seven times the realized error at about one Lyapunov time. The defects realize the gain expected for random vectors with the same covariance, but their temporal correlation makes the transported defects about four times more coherent than independent ones. The defect magnitude explains the differences between forecasts at short horizons, and the gain and the coherence at longer ones. The disagreement between independently trained surrogates is a reference-free error estimate, which, except for under-trained surrogates, ranks individual forecasts with Spearman correlations of 0.62 to 0.84 up to about one Lyapunov time. Multistep fine-tuning reduces the error of under-trained surrogates by damping their tangent dynamics, but has no consistent effect on converged ones.
+\end{abstract}
+
+\begin{keywords}
+learned dynamical systems, finite-time amplification, neural operators, error estimation, multistep training
+\end{keywords}

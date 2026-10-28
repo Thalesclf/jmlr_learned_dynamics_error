@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jmlr-learned-dynamics-error"
+version = "1.0.0"
+description = "Code and saved results for 'Realized Error Amplification in Learned Dynamical Systems'."
+readme = "README.md"
+authors = [{name = "Thales Coelho Leite Fava"}]
+requires-python = ">=3.10"
+dependencies = ["numpy>=2.0", "scipy>=1.13", "pandas>=2.2", "matplotlib>=3.8"]
+
+[project.urls]
+Repository = "https://github.com/Thalesclf/jmlr_learned_dynamics_error"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+torch = ["torch"]   # only needed to load the original checkpoints with PyTorch and to run the PyTorch campaign scripts
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "scripts"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["realized_error"]
